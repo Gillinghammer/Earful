@@ -9,6 +9,7 @@ gem 'pg'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'griddler'
+gem 'griddler-sendgrid'
 
 # Gems used only for assets and not required
 # in production environments by default.
