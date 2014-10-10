@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+<% @posts.each do |post| %>
+  <p><%= post.title %></p>
+  <p><%= post.tags %></p>
+  <p><%= post.content %></p>
+  <p><%= post.sound %></p>
+  <p><%= post.public %></p>
+  <p><%= post.user.try :user_name %></p>
+<% end %>
