@@ -1230,3 +1230,209 @@ Served asset /application.js - 304 Not Modified (0ms)
 Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-10 14:30:22 +0100
 Served asset /home.js - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:15:19 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5.9ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-10 15:15:19 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:15:19 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-10 15:15:19 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:15:19 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:15:19 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:15:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2014-10-10 15:15:23 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 38.5ms (Views: 22.3ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:15:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:15:23 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-10 15:15:23 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-10 15:15:23 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:15:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:15:23 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:17:32 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:17:32 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:17:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:17:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-10 15:17:32 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-10 15:17:32 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:17:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-10-10 15:17:34 +0100
+
+
+Started GET "/users/auth/facebook/callback?code=AQAogXD56fW6SnqdeBlndkJOYRkkXJjhDz5knRKHkk6hrE1MDW5al6DZbBeelkKMZ3uKbp_Xp9QJFohYhel9Dc9Samrdi3-Q_2hhMDwqgtkXp-FWyi1zMAOIPY-0XY2Z31s1zZORKkvdgQhsAzeGjQGM7kGNZoifFb3wI-WcU4aFgWXsEW5xqjdWjs7aj8j5wGy-0LshS2BN8y6fEYGepkXpGRvAJy2z5bEJzohWjrTjcSBDt_MxA4jCBxylwstA0n6AXR0Y5rv931RebQvSBtWUTRNgxAU9DmpTX8Q2BR0Y7uCn7o6dGtsbkmaQR5HJANc&state=242e99fdbcb79c7d86161e69452716d249b5cd432af8b29a" for 127.0.0.1 at 2014-10-10 15:17:34 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAogXD56fW6SnqdeBlndkJOYRkkXJjhDz5knRKHkk6hrE1MDW5al6DZbBeelkKMZ3uKbp_Xp9QJFohYhel9Dc9Samrdi3-Q_2hhMDwqgtkXp-FWyi1zMAOIPY-0XY2Z31s1zZORKkvdgQhsAzeGjQGM7kGNZoifFb3wI-WcU4aFgWXsEW5xqjdWjs7aj8j5wGy-0LshS2BN8y6fEYGepkXpGRvAJy2z5bEJzohWjrTjcSBDt_MxA4jCBxylwstA0n6AXR0Y5rv931RebQvSBtWUTRNgxAU9DmpTX8Q2BR0Y7uCn7o6dGtsbkmaQR5HJANc", "state"=>"242e99fdbcb79c7d86161e69452716d249b5cd432af8b29a"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10100419204747303' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 3.6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:17:36 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.1ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:17:36 +0100
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:17:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:17:36 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-10 15:17:36 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-10 15:17:36 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:17:36 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:18:19 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5.0ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-10 15:18:19 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-10 15:18:19 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:18:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:18:19 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:18:19 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:18:19 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-10-10 15:18:21 +0100
+
+
+Started GET "/users/auth/facebook/callback?code=AQBKzOjR6Vx8CZgm73_q8qf2ASn7K1ZB5r-mm2cwkAibY4jMZLZvF6BGgV64CCgSpVzIfcsfukZKXK13-xJl_adM6d5dAgxz9x_5nmDGq-N8HpHQtH6Upkk4a3x9_A0fDKQDuu8ooSBK7m8pxFl9S_yjiARtbu2cKTmm0vnFt7LDCeIK582Kgl6JgEnscNawf7H7B65x6BNCEaLsOOuzYx9SLFfLT6fXqIFIW_vwIl8nZ95hPcPEs9bO6ZtSSVeGovPnLJ_4NhIE2FPFRFQpbAzz7YbiHl3xVm573VTQdBYwALa6vz99b318KgQjjpMR6a8&state=cb362b7e15c692040600ebd1d44cab7dc55f69152c04576f" for 127.0.0.1 at 2014-10-10 15:18:21 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBKzOjR6Vx8CZgm73_q8qf2ASn7K1ZB5r-mm2cwkAibY4jMZLZvF6BGgV64CCgSpVzIfcsfukZKXK13-xJl_adM6d5dAgxz9x_5nmDGq-N8HpHQtH6Upkk4a3x9_A0fDKQDuu8ooSBK7m8pxFl9S_yjiARtbu2cKTmm0vnFt7LDCeIK582Kgl6JgEnscNawf7H7B65x6BNCEaLsOOuzYx9SLFfLT6fXqIFIW_vwIl8nZ95hPcPEs9bO6ZtSSVeGovPnLJ_4NhIE2FPFRFQpbAzz7YbiHl3xVm573VTQdBYwALa6vz99b318KgQjjpMR6a8", "state"=>"cb362b7e15c692040600ebd1d44cab7dc55f69152c04576f"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10100419204747303' LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 3.0ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:18:24 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4.3ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:18:24 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:18:24 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:18:24 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:18:24 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-10 15:18:24 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-10 15:18:24 +0100
+Served asset /home.js - 304 Not Modified (0ms)
