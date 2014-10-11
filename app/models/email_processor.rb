@@ -1,7 +1,7 @@
 class EmailProcessor
   
   def self.process(email)
-      Post.create!({ title: "this is a test" content: email.body })
+      Post.create!({ title: "this is a test", content: email.body })
   end
 
 
