@@ -1,4 +1,4 @@
-class EmailProcessor
+class EmailProcessor < ActiveRecord::Base
   
   def self.process(email)
       Post.create!({ title: "this is a test", content: email.body })
