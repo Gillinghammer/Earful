@@ -4,6 +4,7 @@
   <!-- <p><%= post.tags %></p> -->
   <p>Body: <%= post.content %></p>
   <p>Sound Attachment: <%= post.sound.try :url %></p>
+  <%= audio_tag sound.try :url %>
   <!-- <p><%= post.public %></p> -->
   <p>Uploaded By: <%= post.user.try :user_name %></p>
 <% end %>
