@@ -6,7 +6,7 @@
   <p>Sound Attachment: <%= post.sound.try :url %></p>
   <h5>Audio file: </h5>
   <p><%= audio_tag post.sound.url %></p>
-  <audio src="<%= post.sound.url %>" preload="auto" controls></audio>
+  <audio src=<%= post.sound.url %> controls></audio>
     <!-- <p></p> -->
     <p>Uploaded By: Colin Gillingham</p>
   <p>Uploaded By: <%= post.user.try :user_name %></p>
