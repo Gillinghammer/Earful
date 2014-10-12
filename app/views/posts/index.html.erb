@@ -4,7 +4,10 @@
   <!-- <p><%= post.tags %></p> -->
   <p>Body: <%= post.content %></p>
   <p>Sound Attachment: <%= post.sound.try :url %></p>
-  <%= audio_tag post.sound.url %>
-  <!-- <p><%= post.public %></p> -->
+  <h5>Audio file: </h5>
+  <p><%= audio_tag post.sound.url %></p>
+  <audio src="<%= post.sound.url %>" preload="auto" controls></audio>
+    <!-- <p></p> -->
+    <p>Uploaded By: Colin Gillingham</p>
   <p>Uploaded By: <%= post.user.try :user_name %></p>
 <% end %>
