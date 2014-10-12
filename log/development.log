@@ -1863,3 +1863,46 @@ Served asset /home.js - 304 Not Modified (1ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-12 17:22:40 +0100
 Served asset /jquery.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20141010095152)
+Migrating to CreatePosts (20141010110250)
+Migrating to AddUserIdToPost (20141010111916)
+Migrating to RemoveSoundFromPosts (20141012154102)
+Migrating to AddAttachmentSoundToPosts (20141012154139)
+Migrating to RemoveSoundFileNameAndSoundContentTypeAndSoundFileSizeAndSoundUpdatedAtFromPosts (20141012163445)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20141010095152)
+Migrating to CreatePosts (20141010110250)
+Migrating to AddUserIdToPost (20141010111916)
+Migrating to RemoveSoundFromPosts (20141012154102)
+Migrating to AddAttachmentSoundToPosts (20141012154139)
+Migrating to RemoveSoundFileNameAndSoundContentTypeAndSoundFileSizeAndSoundUpdatedAtFromPosts (20141012163445)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "posts" DROP "sound_file_name"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "posts" DROP "sound_content_type"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "posts" DROP "sound_file_size"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "posts" DROP "sound_updated_at"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20141012163445')[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20141010095152)
+Migrating to CreatePosts (20141010110250)
+Migrating to AddUserIdToPost (20141010111916)
+Migrating to RemoveSoundFromPosts (20141012154102)
+Migrating to AddAttachmentSoundToPosts (20141012154139)
+Migrating to RemoveSoundFileNameAndSoundContentTypeAndSoundFileSizeAndSoundUpdatedAtFromPosts (20141012163445)
+Migrating to AddSoundToPosts (20141012165915)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "posts" ADD COLUMN "sound" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141012165915')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
