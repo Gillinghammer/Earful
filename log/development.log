@@ -1708,3 +1708,158 @@ Migrating to AddAttachmentSoundToPosts (20141012154139)
   [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20141012154139')[0m
   [1m[35m (0.4ms)[0m  COMMIT
   [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-12 17:21:03 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29.6ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 17:21:03 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-12 17:21:03 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-12 17:21:03 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-12 17:21:03 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-12 17:21:03 +0100
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 17:21:03 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-12 17:21:08 +0100
+
+ActionController::RoutingError (undefined method `before_sound_content_type_post_process' for #<Class:0x007fd9b4a24118>):
+  app/models/post.rb:5:in `<class:Post>'
+  app/models/post.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-12 17:21:30 +0100
+
+ActionController::RoutingError (undefined method `before_sound_content_type_post_process' for #<Class:0x007fd9b9077818>):
+  app/models/post.rb:5:in `<class:Post>'
+  app/models/post.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-12 17:21:32 +0100
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 4.9ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Posts</h1>
+    2: <% @posts.each do |post| %>
+    3:   <p>Subject: <%= post.title %></p>
+    4:   <!-- <p><%= post.tags %></p> -->
+    5:   <p>Body: <%= post.content %></p>
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb__1223093006863575549_70286506022740'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-12 17:21:36 +0100
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1.6ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Posts</h1>
+    2: <% @posts.each do |post| %>
+    3:   <p>Subject: <%= post.title %></p>
+    4:   <!-- <p><%= post.tags %></p> -->
+    5:   <p>Body: <%= post.content %></p>
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb__1223093006863575549_70286506022740'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-12 17:21:38 +0100
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 1.9ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Posts</h1>
+    2: <% @posts.each do |post| %>
+    3:   <p>Subject: <%= post.title %></p>
+    4:   <!-- <p><%= post.tags %></p> -->
+    5:   <p>Body: <%= post.content %></p>
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb__1223093006863575549_70286506022740'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-12 17:21:49 +0100
+
+ActionController::RoutingError (undefined method `before_sound_content_type_post_process' for #<Class:0x007fb9741e6c68>):
+  app/models/post.rb:5:in `<class:Post>'
+  app/models/post.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-12 17:22:40 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mUser Load (3.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 71.1ms (Views: 38.1ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 17:22:40 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-12 17:22:40 +0100
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-12 17:22:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 17:22:40 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-12 17:22:40 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-12 17:22:40 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
