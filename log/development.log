@@ -1949,3 +1949,19 @@ Processing by PostsController#index as HTML
   [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
   Rendered posts/index.html.erb within layouts/application (19.3ms)
 Completed 200 OK in 55.6ms (Views: 20.0ms | ActiveRecord: 11.1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20141010095152)
+Migrating to CreatePosts (20141010110250)
+Migrating to AddUserIdToPost (20141010111916)
+Migrating to RemoveSoundFromPosts (20141012154102)
+Migrating to AddAttachmentSoundToPosts (20141012154139)
+Migrating to RemoveSoundFileNameAndSoundContentTypeAndSoundFileSizeAndSoundUpdatedAtFromPosts (20141012163445)
+Migrating to AddSoundToPosts (20141012165915)
+Migrating to AddWaveformToPosts (20141012204719)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "posts" ADD COLUMN "waveform" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141012204719')
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 

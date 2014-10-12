@@ -10,6 +10,6 @@ class EmailProcessor
     new_post.sound = @email.attachments[0]
     # here's an example of model creation
     user = User.find_by_email(@email.from[:email])
-    user.posts << new_post if user
+    user.posts << new_post if user # TODO validate user is in system before adding new post.
   end
 end
