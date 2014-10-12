@@ -11,17 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141010111916) do
+ActiveRecord::Schema.define(:version => 20141012154139) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.string   "tags"
     t.text     "content"
-    t.string   "sound"
     t.boolean  "public"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "user_id"
+    t.string   "sound_file_name"
+    t.string   "sound_content_type"
+    t.integer  "sound_file_size"
+    t.datetime "sound_updated_at"
   end
 
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"

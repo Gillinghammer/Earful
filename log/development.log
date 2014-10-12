@@ -1677,3 +1677,34 @@ ActionController::RoutingError (No route matches [GET] "/email_processor"):
   Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20141010095152)
+Migrating to CreatePosts (20141010110250)
+Migrating to AddUserIdToPost (20141010111916)
+Migrating to RemoveSoundFromPosts (20141012154102)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (17.3ms)[0m  [1mALTER TABLE "posts" DROP "sound"[0m
+  [1m[35m (2.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141012154102')
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20141010095152)
+Migrating to CreatePosts (20141010110250)
+Migrating to AddUserIdToPost (20141010111916)
+Migrating to RemoveSoundFromPosts (20141012154102)
+Migrating to AddAttachmentSoundToPosts (20141012154139)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mALTER TABLE "posts" ADD COLUMN "sound_file_name" character varying(255)[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "posts" ADD COLUMN "sound_content_type" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "posts" ADD COLUMN "sound_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "posts" ADD COLUMN "sound_updated_at" timestamp
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20141012154139')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
