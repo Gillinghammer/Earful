@@ -1,11 +1,14 @@
-<h1>Posts</h1>
-<% @posts.each do |post| %>
-  <p>Subject: <%= post.title %></p>
-  <!-- <p><%= post.tags %></p> -->
-  <p>Body: <%= post.content %></p>
-  <p>Sound Attachment: <%= post.sound.try :url %></p>
-  <h5>Audio file: </h5>
-  <p><%= audio_tag post.sound.url %></p>
-  <audio src=<%= post.sound.url %> controls></audio>
-  <p>Uploaded By: <%= post.user.try :user_name %></p>
-<% end %>
+<div id="myfeed" ng-controller="FeedController as feed">
+  <div class="post" ng-repeat="item in feedItems">
+    <h3 ng-hide="editItem == item.id">{{ item.title }}</h3>
+      <input ng-show="editItem == item.id" type="text" ng-model="item.title">
+    <p ng-hide="editItem == item.id">{{ item.created_at }}</p>
+    <p ng-hide="editItem == item.id">{{ item.public }}
+      <p ng-show="editItem == item.id"><input type="checkbox" name="Public?" ng-model="item.public">Public?</p>
+    </p>
+    <p ng-hide="editItem == item.id"><audio src="{{ item.sound.url }}" controls></audio></p>
+    <p ng-hide="editItem == item.id">{{ item.content }}</p>
+    <textarea ng-show="editItem == item.id" ng-model="item.content"></textarea><br>
+    <button class="edit" id="{{ item.id }}" ng-click="selectEditItem(item.id)">Edit</button>
+  </div>
+</div>

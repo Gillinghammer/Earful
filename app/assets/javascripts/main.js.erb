@@ -1,0 +1,23 @@
+(function() {  
+  
+  var app = angular.module('earfulOfAngular',[]);
+
+  app.controller('FeedController', function($scope, $http) {
+
+    $scope.feedItems = [];
+    $scope.editItem = false;
+
+    $http.get('/posts.json').success(function(data){
+      $scope.feedItems = data
+      console.log($scope.feedItems);
+
+    });
+
+    $scope.selectEditItem = function(itemId){
+      $scope.editItem = itemId;
+      console.log($scope.editItem);
+    }
+
+  });
+
+})();
