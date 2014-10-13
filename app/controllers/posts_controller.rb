@@ -2,8 +2,9 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
-
+    @user = User.find(params[:user_id])
+    @posts = @user.posts
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
