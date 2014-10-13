@@ -6,8 +6,8 @@
 
     $scope.feedItems = [];
     $scope.editItem = false;
-    userId = $('#user_id').attr("value");
-    $http.get('/users/'+ userId +'/posts.json').success(function(data){
+    $scope.userId = $('#user_id').attr("value");
+    $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
       $scope.feedItems = data
       console.log($scope.feedItems);
 
@@ -18,7 +18,7 @@
     }
 
     $scope.selectUpdateItem = function(item){
-      $http.put('/posts/' + item.id + '.json', item ).success(function(data){
+      $http.put('/users/'+ $scope.userId + '/posts/' + item.id + '.json', item ).success(function(data){
         $scope.editItem = 0;
         var index = $scope.feedItems.indexOf(item);
         console.log('Index equals: ' + index);

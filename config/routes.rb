@@ -1,9 +1,10 @@
 Earful::Application.routes.draw do
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }, :path => "accounts"
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
+  root to: 'posts#index'
 
   devise_scope :user do
-    root to: 'devise/sessions#new'
     get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
@@ -11,6 +12,8 @@ Earful::Application.routes.draw do
   resources :users do 
     resources :posts
   end
+
+  resources :posts
 
   mount_griddler
 

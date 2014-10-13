@@ -2,9 +2,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts
-    
+    @user = User.find(params[:user_id]) if params[:user_id]
+    @posts = @user.posts if @user != nil
+    @posts = Post.all if @user == nil
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
