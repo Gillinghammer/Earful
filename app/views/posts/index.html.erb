@@ -1,14 +1,15 @@
 <div id="myfeed" ng-controller="FeedController as feed">
-  <div class="post" ng-repeat="item in feedItems">
-    <h3 ng-hide="editItem == item.id">{{ item.title }}</h3>
-      <input ng-show="editItem == item.id" type="text" ng-model="item.title">
-    <p ng-hide="editItem == item.id">{{ item.created_at }}</p>
-    <p ng-hide="editItem == item.id">{{ item.public }}
-      <p ng-show="editItem == item.id"><input type="checkbox" name="Public?" ng-model="item.public">Public?</p>
+  <div class="post" ng-repeat="item in feedItems track by $index">
+    <h3 ng-hide="editItem === item">{{ item.title }}</h3>
+      <input ng-show="editItem === item" type="text" ng-model="item.title">
+    <p ng-hide="editItem === item">{{ item.created_at }}</p>
+    <p ng-hide="editItem === item">{{ item.public }}
+      <p ng-show="editItem === item"><input type="checkbox" name="Public?" ng-model="item.public">Public?</p>
     </p>
-    <p ng-hide="editItem == item.id"><audio src="{{ item.sound.url }}" controls></audio></p>
-    <p ng-hide="editItem == item.id">{{ item.content }}</p>
-    <textarea ng-show="editItem == item.id" ng-model="item.content"></textarea><br>
-    <button class="edit" id="{{ item.id }}" ng-click="selectEditItem(item.id)">Edit</button>
+    <p ng-hide="editItem === item"><audio src="{{ item.sound.url }}" controls></audio></p>
+    <p ng-hide="editItem === item">{{ item.content }}</p>
+    <textarea ng-show="editItem === item" ng-model="item.content"></textarea><br>
+    <button ng-hide="editItem === item" ng-click="selectEditItem(item)">Edit</button>
+    <button ng-show="editItem === item" ng-click="selectUpdateItem(item)">Update</button>
   </div>
 </div>

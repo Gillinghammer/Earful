@@ -13,9 +13,19 @@
 
     });
 
-    $scope.selectEditItem = function(itemId){
-      $scope.editItem = itemId;
-      console.log($scope.editItem);
+    $scope.selectEditItem = function(item){
+      $scope.editItem = item;
+    }
+
+    $scope.selectUpdateItem = function(item){
+      $http.put('/posts/' + item.id + '.json', item ).success(function(data){
+        $scope.editItem = 0;
+        var index = $scope.feedItems.indexOf(item);
+        console.log('Index equals: ' + index);
+        $scope.feedItems.splice(index, 1, data);
+        
+        console.log(data);
+      });
     }
 
   });

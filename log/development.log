@@ -16009,3 +16009,2896 @@ ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url
 
 
   Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4.8ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 4.2ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:02:08 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6.2ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 4.0ms (Views: 1.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:02:16 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (5ms)  (pid 35101)
+Completed 200 OK in 35.2ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 3.9ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:08:17 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started PUT "/postsundefined.json" for 127.0.0.1 at 2014-10-13 19:08:42 +0100
+
+ActionController::RoutingError (No route matches [PUT] "/postsundefined.json"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4.4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 4.9ms (Views: 1.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:08:54 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:09:26 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Compiled main.js  (7ms)  (pid 35101)
+Compiled application.js  (3ms)  (pid 35101)
+Completed 200 OK in 36.4ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 7.3ms (Views: 2.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:09:27 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:09:50 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (5ms)  (pid 35101)
+Compiled application.js  (3ms)  (pid 35101)
+Completed 200 OK in 31.8ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 4.5ms (Views: 1.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:09:51 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (3ms)  (pid 35101)
+Completed 200 OK in 77.4ms (Views: 75.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 4.5ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:10:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/posts6.json" for 127.0.0.1 at 2014-10-13 19:10:39 +0100
+
+ActionController::RoutingError (No route matches [PUT] "/posts6.json"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (6ms)  (pid 35101)
+Completed 200 OK in 31.2ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 5.2ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:10:49 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:11:00 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Food at Hassans with Live musiic, listen!!!", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T12:59:16Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Food at Hassans with Live musiic, listen!!!", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (2.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.6ms)[0m  [1mUPDATE "posts" SET "content" = 'Food at Hassans with Live musiic, listen!!!', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:11:00.089367' WHERE "posts"."id" = 6[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+Completed 204 No Content in 11.7ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:11:21 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5.7ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (2.2ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 4.7ms (Views: 1.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:11:22 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (0ms)  (pid 35101)
+Compiled application.js  (3ms)  (pid 35101)
+Completed 200 OK in 30.8ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 8.4ms (Views: 1.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:13:15 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:13:23 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:13:23 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started PUT "/posts/7.json" for 127.0.0.1 at 2014-10-13 19:13:28 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Friends Yay!", "created_at"=>"2014-10-13T12:59:55Z", "id"=>"7", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "updated_at"=>"2014-10-13T12:59:55Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Friends Yay!", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (1.8ms)[0m  UPDATE "posts" SET "content" = 'Friends Yay!', "sound" = 'Bar_Beirut_Lebanon.m4a', "updated_at" = '2014-10-13 18:13:28.836468' WHERE "posts"."id" = 7
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 7.9ms (ActiveRecord: 2.9ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:13:37 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"sound awesome, even better when actually in Scotland...", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>false, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipes in Scotland", "updated_at"=>"2014-10-13T13:00:37Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"sound awesome, even better when actually in Scotland...", "public"=>false, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipes in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "8"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "content" = 'sound awesome, even better when actually in Scotland...', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:13:37.582971' WHERE "posts"."id" = 8[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 204 No Content in 5.4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5.3ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 4.6ms (Views: 1.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:13:54 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:14:00 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"sound awesome, even better when in Scotland...", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>false, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipes in Scotland", "updated_at"=>"2014-10-13T18:13:37Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"sound awesome, even better when in Scotland...", "public"=>false, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipes in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = 'sound awesome, even better when in Scotland...', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:14:00.725263' WHERE "posts"."id" = 8
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 6.8ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4.2ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (2.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 5.3ms (Views: 1.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:14:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (7ms)  (pid 35101)
+Completed 200 OK in 33.2ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 3.3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:15:32 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:15:36 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Food at Hassans with Live musiilisten!!!", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:11:00Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Food at Hassans with Live musiilisten!!!", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "content" = 'Food at Hassans with Live musiilisten!!!', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:15:36.244411' WHERE "posts"."id" = 6[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 204 No Content in 6.5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5.6ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 5.3ms (Views: 2.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:16:08 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:16:18 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Food", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:15:36Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Food", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = 'Food', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:16:18.820654' WHERE "posts"."id" = 6
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 6.8ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:17:46 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (10ms)  (pid 35101)
+Completed 200 OK in 33.2ms (Views: 31.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Served asset /main.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 5.8ms (Views: 1.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:17:47 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/posts/7.json" for 127.0.0.1 at 2014-10-13 19:17:53 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Friends Yay! and more edits", "created_at"=>"2014-10-13T12:59:55Z", "id"=>"7", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "updated_at"=>"2014-10-13T18:13:28Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Friends Yay! and more edits", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "content" = 'Friends Yay! and more edits', "sound" = 'Bar_Beirut_Lebanon.m4a', "updated_at" = '2014-10-13 18:17:53.452522' WHERE "posts"."id" = 7[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+Completed 204 No Content in 5.6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4.2ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (2.3ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 5.4ms (Views: 2.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:17:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:18:16 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"sound awesome, even better when in Scotland...asdfasdfsdfasdf", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipes in Scotland", "updated_at"=>"2014-10-13T18:14:00Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"sound awesome, even better when in Scotland...asdfasdfsdfasdf", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipes in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = 'sound awesome, even better when in Scotland...asdfasdfsdfasdf', "public" = 't', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:18:16.068902' WHERE "posts"."id" = 8
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 5.6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:21:28 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Compiled main.js  (2ms)  (pid 35101)
+Compiled application.js  (7ms)  (pid 35101)
+Completed 200 OK in 36.4ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:21:29 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 6.9ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:21:36 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Food!!!", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:16:18Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Food!!!", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "content" = 'Food!!!', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:21:36.569641' WHERE "posts"."id" = 6[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+Completed 204 No Content in 5.7ms (ActiveRecord: 1.7ms)
+
+
+Started PUT "/posts/undefined.json" for 127.0.0.1 at 2014-10-13 19:21:53 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"id"=>"undefined", "post"=>{}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 1.7ms
+
+ActiveRecord::RecordNotFound - Couldn't find Post with id=undefined:
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:344:in `find_one'
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:315:in `find_with_ids'
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:107:in `find'
+  activerecord (3.2.19) lib/active_record/querying.rb:5:in `find'
+  app/controllers/posts_controller.rb:59:in `update'
+  actionpack (3.2.19) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.19) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.19) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:414:in `_run__206870947947469921__process_action__2546325944828047421__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.19) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.19) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.19) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.19) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.19) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.19) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.19) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.19) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__1137770833731907218__call__1506165955158218647__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started PUT "/posts/undefined.json" for 127.0.0.1 at 2014-10-13 19:21:53 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"id"=>"undefined", "post"=>{}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 1.5ms
+
+ActiveRecord::RecordNotFound - Couldn't find Post with id=undefined:
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:344:in `find_one'
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:315:in `find_with_ids'
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:107:in `find'
+  activerecord (3.2.19) lib/active_record/querying.rb:5:in `find'
+  app/controllers/posts_controller.rb:59:in `update'
+  actionpack (3.2.19) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.19) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.19) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:414:in `_run__206870947947469921__process_action__2546325944828047421__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.19) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.19) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.19) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.19) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.19) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.19) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.19) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.19) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__1137770833731907218__call__1506165955158218647__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started PUT "/posts/undefined.json" for 127.0.0.1 at 2014-10-13 19:21:54 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"id"=>"undefined", "post"=>{}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 1.8ms
+
+ActiveRecord::RecordNotFound - Couldn't find Post with id=undefined:
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:344:in `find_one'
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:315:in `find_with_ids'
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:107:in `find'
+  activerecord (3.2.19) lib/active_record/querying.rb:5:in `find'
+  app/controllers/posts_controller.rb:59:in `update'
+  actionpack (3.2.19) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.19) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.19) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:414:in `_run__206870947947469921__process_action__2546325944828047421__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.19) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.19) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.19) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.19) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.19) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.19) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.19) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.19) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__1137770833731907218__call__1506165955158218647__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started PUT "/posts/undefined.json" for 127.0.0.1 at 2014-10-13 19:21:54 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"id"=>"undefined", "post"=>{}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 1.6ms
+
+ActiveRecord::RecordNotFound - Couldn't find Post with id=undefined:
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:344:in `find_one'
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:315:in `find_with_ids'
+  activerecord (3.2.19) lib/active_record/relation/finder_methods.rb:107:in `find'
+  activerecord (3.2.19) lib/active_record/querying.rb:5:in `find'
+  app/controllers/posts_controller.rb:59:in `update'
+  actionpack (3.2.19) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.19) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.19) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:414:in `_run__206870947947469921__process_action__2546325944828047421__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.19) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.19) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.19) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.19) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.19) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.19) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.19) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.19) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.19) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__1137770833731907218__call__1506165955158218647__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5.8ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 5.4ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:21:55 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/posts/7.json" for 127.0.0.1 at 2014-10-13 19:22:06 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Frblahaasd", "created_at"=>"2014-10-13T12:59:55Z", "id"=>"7", "public"=>false, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "updated_at"=>"2014-10-13T18:17:53Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Frblahaasd", "public"=>false, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = 'Frblahaasd', "public" = 'f', "sound" = 'Bar_Beirut_Lebanon.m4a', "updated_at" = '2014-10-13 18:22:06.951505' WHERE "posts"."id" = 7
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 5.1ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7.6ms (Views: 5.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 4.3ms (Views: 1.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:22:08 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:22:30 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"wheScotland...asdfasdfsdfasdf", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "updated_at"=>"2014-10-13T18:18:16Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"wheScotland...asdfasdfsdfasdf", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "8"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "content" = 'wheScotland...asdfasdfsdfasdf', "title" = 'Bagpipe!s in Scotland', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:22:30.443535' WHERE "posts"."id" = 8[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 204 No Content in 40.2ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (3ms)  (pid 35101)
+Completed 200 OK in 29.9ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 5.7ms (Views: 2.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:23:07 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:23:12 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Food :)", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:21:36Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Food :)", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = 'Food :)', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:23:12.959764' WHERE "posts"."id" = 6
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 6.0ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (4ms)  (pid 35101)
+Completed 200 OK in 31.6ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 6.2ms (Views: 1.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:23:27 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started PUT "/posts/7.json" for 127.0.0.1 at 2014-10-13 19:23:30 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Frblahaasdasdfasdf", "created_at"=>"2014-10-13T12:59:55Z", "id"=>"7", "public"=>false, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "updated_at"=>"2014-10-13T18:22:06Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Frblahaasdasdfasdf", "public"=>false, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "content" = 'Frblahaasdasdfasdf', "sound" = 'Bar_Beirut_Lebanon.m4a', "updated_at" = '2014-10-13 18:23:30.352882' WHERE "posts"."id" = 7[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 204 No Content in 5.8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4.6ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 4.6ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:23:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (8.0ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:24:02 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"wheScotland...asdfasdfsdfasdf", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "updated_at"=>"2014-10-13T18:22:30Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"wheScotland...asdfasdfsdfasdf", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:24:02.175269' WHERE "posts"."id" = 8
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 5.7ms (ActiveRecord: 1.9ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:24:06 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Food :)!!", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:23:12Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Food :)!!", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "content" = 'Food :)!!', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:24:06.828091' WHERE "posts"."id" = 6[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+Completed 204 No Content in 5.0ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6.0ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 3.5ms (Views: 1.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:25:10 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started PUT "/posts/7.json" for 127.0.0.1 at 2014-10-13 19:25:19 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Wow what a fun night!", "created_at"=>"2014-10-13T12:59:55Z", "id"=>"7", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "updated_at"=>"2014-10-13T18:23:30Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Wow what a fun night!", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = 'Wow what a fun night!', "public" = 't', "sound" = 'Bar_Beirut_Lebanon.m4a', "updated_at" = '2014-10-13 18:25:19.425774' WHERE "posts"."id" = 7
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 4.9ms (ActiveRecord: 1.7ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:25:30 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"yeah kilts!", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "updated_at"=>"2014-10-13T18:24:02Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"yeah kilts!", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "8"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "content" = 'yeah kilts!', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:25:30.437439' WHERE "posts"."id" = 8[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+Completed 204 No Content in 4.9ms (ActiveRecord: 1.9ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:25:38 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Yum", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:24:06Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Yum", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = 'Yum', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:25:38.695840' WHERE "posts"."id" = 6
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 4.8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:26:03 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4.1ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:26:03 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (2.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 5.5ms (Views: 2.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:26:04 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started PUT "/posts/7.json" for 127.0.0.1 at 2014-10-13 19:28:51 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Wow what a fun night!", "created_at"=>"2014-10-13T12:59:55Z", "id"=>"7", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "updated_at"=>"2014-10-13T18:25:19Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Wow what a fun night!", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"A bar in Beirut", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "sound" = 'Bar_Beirut_Lebanon.m4a', "updated_at" = '2014-10-13 18:28:51.171566' WHERE "posts"."id" = 7[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+Completed 204 No Content in 5.4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (3ms)  (pid 35101)
+Completed 200 OK in 27.2ms (Views: 25.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 12.5ms (Views: 9.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:30:42 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:30:47 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Yumasdfasdf", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:25:38Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Yumasdfasdf", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  UPDATE "posts" SET "content" = 'Yumasdfasdf', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:30:47.550239' WHERE "posts"."id" = 6
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 6.7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:32:28 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (0ms)  (pid 35101)
+Compiled application.js  (3ms)  (pid 35101)
+Completed 200 OK in 30.6ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 5.1ms (Views: 1.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:32:29 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:32:34 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"yeah kilts! duplicated?", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "updated_at"=>"2014-10-13T18:25:30Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"yeah kilts! duplicated?", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "8"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "content" = 'yeah kilts! duplicated?', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:32:34.497714' WHERE "posts"."id" = 8[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+Completed 204 No Content in 5.1ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (0ms)  (pid 35101)
+Compiled application.js  (4ms)  (pid 35101)
+Completed 200 OK in 41.3ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (2.4ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 5.6ms (Views: 1.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:32:58 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:33:12 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"yeah kilts! blah test", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "updated_at"=>"2014-10-13T18:32:34Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"yeah kilts! blah test", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = 'yeah kilts! blah test', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:33:12.292634' WHERE "posts"."id" = 8
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 4.8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (1ms)  (pid 35101)
+Compiled application.js  (6ms)  (pid 35101)
+Completed 200 OK in 39.4ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 2.9ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:33:33 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:33:38 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"data?", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:30:47Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"data?", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "content" = 'data?', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:33:38.790050' WHERE "posts"."id" = 6[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+Completed 204 No Content in 5.6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (0ms)  (pid 35101)
+Compiled application.js  (3ms)  (pid 35101)
+Completed 200 OK in 41.5ms (Views: 26.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 5.7ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-13 19:35:27 +0100
+
+ActionController::RoutingError (No route matches [GET] "/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:35:34 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"yeah kilts!", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>false, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "updated_at"=>"2014-10-13T18:33:12Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"yeah kilts!", "public"=>false, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipe!s in Scotland", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  UPDATE "posts" SET "content" = 'yeah kilts!', "public" = 'f', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:35:34.764940' WHERE "posts"."id" = 8
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 9.2ms (Views: 1.0ms | ActiveRecord: 3.2ms)
+
+
+Started PUT "/posts/7.json" for 127.0.0.1 at 2014-10-13 19:36:04 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"First night in Lebanon, some live music. Love all the clapping at the end, wow.", "created_at"=>"2014-10-13T12:59:55Z", "id"=>"7", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"Beirut Bar with Friends", "updated_at"=>"2014-10-13T18:28:51Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"First night in Lebanon, some live music. Love all the clapping at the end, wow.", "public"=>true, "sound"=>{"url"=>"/Bar_Beirut_Lebanon.m4a"}, "tags"=>"Friends Lebanon Beirut Music", "title"=>"Beirut Bar with Friends", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "content" = 'First night in Lebanon, some live music. Love all the clapping at the end, wow.', "title" = 'Beirut Bar with Friends', "sound" = 'Bar_Beirut_Lebanon.m4a', "updated_at" = '2014-10-13 18:36:04.998062' WHERE "posts"."id" = 7[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 200 OK in 6.0ms (Views: 0.8ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/posts/8.json" for 127.0.0.1 at 2014-10-13 19:36:27 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Bagpipes always sound the best in Scotland.", "created_at"=>"2014-10-13T13:00:37Z", "id"=>"8", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipes", "updated_at"=>"2014-10-13T18:35:34Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Bagpipes always sound the best in Scotland.", "public"=>true, "sound"=>{"url"=>"/Edinburgh_Scotland.m4a"}, "tags"=>"Music Square Edinburgh Scotland", "title"=>"Bagpipes", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  UPDATE "posts" SET "content" = 'Bagpipes always sound the best in Scotland.', "public" = 't', "title" = 'Bagpipes', "sound" = 'Edinburgh_Scotland.m4a', "updated_at" = '2014-10-13 18:36:27.185327' WHERE "posts"."id" = 8
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 8.9ms (Views: 0.7ms | ActiveRecord: 2.6ms)
+
+
+Started PUT "/posts/6.json" for 127.0.0.1 at 2014-10-13 19:36:52 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Our friend Hasan invited us to his restaurant. Not too shabby... try the clay pot.", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-13T18:33:38Z", "user_id"=>1, "waveform"=>nil, "post"=>{"content"=>"Our friend Hasan invited us to his restaurant. Not too shabby... try the clay pot.", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>1}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "content" = 'Our friend Hasan invited us to his restaurant. Not too shabby... try the clay pot.', "sound" = 'Hasans.m4a', "updated_at" = '2014-10-13 18:36:52.088781' WHERE "posts"."id" = 6[0m
+  [1m[35m (1.4ms)[0m  COMMIT
+Completed 200 OK in 6.2ms (Views: 0.8ms | ActiveRecord: 2.2ms)
