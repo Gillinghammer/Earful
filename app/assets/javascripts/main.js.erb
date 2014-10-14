@@ -28,6 +28,10 @@
       });
     }
 
+    $scope.togglePost = function(item){
+          $("#content" + item.id).slideToggle(500, function(){});
+    }
+
   });
 
 })();

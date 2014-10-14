@@ -1,0 +1,59 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: #333;
+$link-color: #333;
+$special-color: #333;
+
+*{
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 479px) {
+  
+  body {
+    font-family: $font-stack;
+      padding: 0 10px;
+      #myfeed {
+        max-width: 479px;
+        .post {
+          min-height: 350px;
+          text-align: center;
+          div.datebox {
+            width: 90px;
+            height: 90px;
+            border: 1px solid black;
+            float: left;
+            div.day {
+              font-size: 2em;
+              padding-top: 10px;
+            }
+            div.monthyear {
+              padding-top: 10px;
+            }
+          }
+          div.waveform {
+            background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
+            background-size: contain;
+            min-height: 100px;
+            max-width: 80%;
+            margin-left: 100px;
+          }
+        
+          .title {
+            display: block;
+            color: $primary-color;
+            margin:0;
+            padding:0;
+            text-decoration: underline;
+            cursor: pointer;
+            padding-top: 20px;
+          }
+            .postContent {
+              display: none;
+              padding-top: 20px;
+          }
+        }
+      }
+
+    }
+  }
