@@ -15,7 +15,14 @@
     <div ng-hide="editItem === item" class="postContent" id="content{{ item.id }}">{{ item.content }}</div>
     <textarea ng-show="editItem === item" ng-model="item.content"></textarea><br>
     <p ng-hide="editItem === item"><audio src="{{ item.sound.url }}" controls></audio></p>
-    <p ng-hide="editItem === item">Public: {{ item.public }}</p>
+    <!-- <p ng-hide="editItem === item">Public: {{ item.public }}</p> -->
+    <div class="onoffswitch" ng-hide="editItem === item">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+    </div><br>
     <p ng-show="editItem === item"><input type="checkbox" name="Public?" ng-model="item.public">Public?</p>
     <button ng-hide="editItem === item" ng-click="selectEditItem(item)">Edit</button>
     <button ng-show="editItem === item" ng-click="selectUpdateItem(item)">Update</button>

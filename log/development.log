@@ -66152,3 +66152,1292 @@ ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.s
 
 
   Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 0.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 11.9ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /animate.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /normalize.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /angular.js - 200 OK (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /angular-animate.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /main.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:48:36 +0100
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:48:44 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6.6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:48:44 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1
+Completed 200 OK in 5.2ms (Views: 2.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:48:44 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache /Users/gillinghammer/wdi_working/wdi8/project_three/tmp/cache/sass/41c05a4c61bfe7d552343032d2814434936d05df/style.css.scssc: can't dump anonymous class #<Class:0x007f9ab4b61ce0>
+
+Compiled style.css  (24ms)  (pid 48342)
+Compiled application.css  (1ms)  (pid 48342)
+Completed 200 OK in 42.1ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /style.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+Completed 200 OK in 3.7ms (Views: 2.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:55:40 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:56:13 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6.4ms (Views: 5.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (2.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1
+Completed 200 OK in 6.3ms (Views: 2.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:56:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6.4ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:56:47 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:56:48 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+Completed 200 OK in 6.3ms (Views: 2.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:56:48 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started PUT "/users/1/posts/6.json" for 127.0.0.1 at 2014-10-14 15:56:49 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Our friend Hasan invited us to his restaurant. Not too shabby... try the clay pot.", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-14T14:08:37Z", "user_id"=>"1", "waveform"=>nil, "post"=>{"content"=>"Our friend Hasan invited us to his restaurant. Not too shabby... try the clay pot.", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>"1"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "posts" SET "sound" = 'Hasans.m4a', "updated_at" = '2014-10-14 14:56:49.591927' WHERE "posts"."id" = 6[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+Completed 200 OK in 6.4ms (Views: 0.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache /Users/gillinghammer/wdi_working/wdi8/project_three/tmp/cache/sass/41c05a4c61bfe7d552343032d2814434936d05df/style.css.scssc: can't dump anonymous class #<Class:0x007f9ab4b61ce0>
+
+Compiled style.css  (35ms)  (pid 48342)
+Compiled application.css  (1ms)  (pid 48342)
+Completed 200 OK in 50.0ms (Views: 48.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /style.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+Completed 200 OK in 3.8ms (Views: 2.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:57:23 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:57:45 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Warning. Error encountered while saving cache /Users/gillinghammer/wdi_working/wdi8/project_three/tmp/cache/sass/41c05a4c61bfe7d552343032d2814434936d05df/style.css.scssc: can't dump anonymous class #<Class:0x007f9ab4b61ce0>
+
+Compiled style.css  (21ms)  (pid 48342)
+Compiled application.css  (2ms)  (pid 48342)
+Completed 200 OK in 40.8ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /style.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1
+Completed 200 OK in 7.7ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:57:46 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache /Users/gillinghammer/wdi_working/wdi8/project_three/tmp/cache/sass/41c05a4c61bfe7d552343032d2814434936d05df/style.css.scssc: can't dump anonymous class #<Class:0x007f9ab4b61ce0>
+
+Compiled style.css  (24ms)  (pid 48342)
+Compiled application.css  (1ms)  (pid 48342)
+Completed 200 OK in 41.5ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /style.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+Completed 200 OK in 5.2ms (Views: 2.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:57:52 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Warning. Error encountered while saving cache /Users/gillinghammer/wdi_working/wdi8/project_three/tmp/cache/sass/41c05a4c61bfe7d552343032d2814434936d05df/style.css.scssc: can't dump anonymous class #<Class:0x007f9ab4b61ce0>
+
+Compiled style.css  (20ms)  (pid 48342)
+Compiled application.css  (1ms)  (pid 48342)
+Completed 200 OK in 37.6ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /style.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1
+Completed 200 OK in 9.4ms (Views: 4.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:58:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Warning. Error encountered while saving cache /Users/gillinghammer/wdi_working/wdi8/project_three/tmp/cache/sass/41c05a4c61bfe7d552343032d2814434936d05df/style.css.scssc: can't dump anonymous class #<Class:0x007f9ab4b61ce0>
+
+Compiled style.css  (23ms)  (pid 48342)
+Compiled application.css  (1ms)  (pid 48342)
+Completed 200 OK in 40.2ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /style.css - 200 OK (3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+Completed 200 OK in 4.3ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:58:40 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Warning. Error encountered while saving cache /Users/gillinghammer/wdi_working/wdi8/project_three/tmp/cache/sass/41c05a4c61bfe7d552343032d2814434936d05df/style.css.scssc: can't dump anonymous class #<Class:0x007f9ab4b61ce0>
+
+Compiled style.css  (20ms)  (pid 48342)
+Compiled application.css  (1ms)  (pid 48342)
+Completed 200 OK in 35.3ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /style.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1
+Completed 200 OK in 8.5ms (Views: 3.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:58:46 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Warning. Error encountered while saving cache /Users/gillinghammer/wdi_working/wdi8/project_three/tmp/cache/sass/41c05a4c61bfe7d552343032d2814434936d05df/style.css.scssc: can't dump anonymous class #<Class:0x007f9ab4b61ce0>
+
+Compiled style.css  (23ms)  (pid 48342)
+Compiled application.css  (1ms)  (pid 48342)
+Completed 200 OK in 43.4ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /style.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+Completed 200 OK in 3.3ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:58:50 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5.9ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1
+Completed 200 OK in 5.0ms (Views: 2.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:59:04 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.5ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular-animate.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /angular-animate.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:59:14 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 127.0.0.1 at 2014-10-14 15:59:15 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+Completed 200 OK in 7.6ms (Views: 5.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 127.0.0.1 at 2014-10-14 15:59:15 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/1/posts" for 192.168.1.224 at 2014-10-14 15:59:23 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6.5ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.224 at 2014-10-14 15:59:23 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.224 at 2014-10-14 15:59:24 +0100
+Served asset /animate.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 192.168.1.224 at 2014-10-14 15:59:24 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.224 at 2014-10-14 15:59:24 +0100
+Served asset /normalize.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 192.168.1.224 at 2014-10-14 15:59:24 +0100
+Served asset /style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.224 at 2014-10-14 15:59:24 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/angular.js?body=1" for 192.168.1.224 at 2014-10-14 15:59:30 +0100
+Served asset /angular.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts.json" for 192.168.1.224 at 2014-10-14 15:59:30 +0100
+Processing by PostsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1
+Completed 200 OK in 4.3ms (Views: 2.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/%7B%7B%20item.sound.url%20%7D%7D" for 192.168.1.224 at 2014-10-14 15:59:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/%7B%7B%20item.sound.url%20%7D%7D"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gillinghammer/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/users/1/posts/6.json" for 127.0.0.1 at 2014-10-14 16:03:19 +0100
+Processing by PostsController#update as JSON
+  Parameters: {"content"=>"Our friend Hasan invited us to his restaurant. Not too shabby... try the clay pot.", "created_at"=>"2014-10-13T12:59:16Z", "id"=>"6", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "updated_at"=>"2014-10-14T14:56:49Z", "user_id"=>"1", "waveform"=>nil, "post"=>{"content"=>"Our friend Hasan invited us to his restaurant. Not too shabby... try the clay pot.", "public"=>true, "sound"=>{"url"=>"/Hasans.m4a"}, "tags"=>"Music Turkey", "title"=>"Hasans Restaurant", "user_id"=>"1"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  UPDATE "posts" SET "sound" = 'Hasans.m4a', "updated_at" = '2014-10-14 15:03:19.986472' WHERE "posts"."id" = 6
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 5.7ms (Views: 0.6ms | ActiveRecord: 1.9ms)
