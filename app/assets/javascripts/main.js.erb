@@ -10,6 +10,10 @@
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
       $scope.feedItems = data
       console.log($scope.feedItems);
+      // load audiojs
+      // audiojs.events.ready(function() {
+      //     var as = audiojs.createAll();
+      //   });
 
     });
 

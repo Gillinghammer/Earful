@@ -1,6 +1,6 @@
 <%= hidden_field(:user, :id) %>
 <div id="myfeed" ng-controller="FeedController as feed">
-  <div class="post" ng-repeat="item in feedItems track by $index">
+  <div class="post" ng-repeat="item in feedItems track by $index | orderBy : created_at">
     <div class="datebox" ng-hide="editItem === item">
       <div class="day">
         {{ item.created_at | date:'dd' }}

@@ -12,7 +12,7 @@ Earful::Application.routes.draw do
     end
   end
 
-  # resources :posts
+  resources :posts, only: [:new, :create]
 
   mount_griddler
 
