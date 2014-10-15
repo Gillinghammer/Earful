@@ -8,7 +8,6 @@ class PostsController < ApplicationController
     else
       @posts = Post.where(public: true) # TODO where user_id != current_user.id
     end
-
       @public_Posts = Post.where(public: true)
 
     respond_to do |format|
