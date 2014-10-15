@@ -3,8 +3,13 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @user = User.find(params[:user_id]) if params[:user_id]
-    @posts = @user.posts if @user != nil
-    @posts = Post.all if @user == nil
+    if @user
+      @posts = @user.posts 
+    else
+      @posts = Post.where(public: true) # TODO where user_id != current_user.id
+    end
+
+      @public_Posts = Post.where(public: true)
 
     respond_to do |format|
       format.html # index.html.erb

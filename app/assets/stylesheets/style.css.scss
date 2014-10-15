@@ -16,6 +16,7 @@ $special-color: #333;
     font-family: $font-stack;
       #myfeed {
         top: 0;
+        margin-bottom: 170px;
         .post {
           min-height: 350px;
           text-align: center;
@@ -60,6 +61,7 @@ $special-color: #333;
       }
       #feedList {
         top: 0;
+        margin-bottom: 170px;
         #searchbar {
           display: block;
           text-align: center;
@@ -72,8 +74,10 @@ $special-color: #333;
         }
         div#feedItems {
         .item {
+          padding: 20px 0;
           .itemInfo {
-            border-bottom: 1px solid black;
+            background-color: $secondary-color;
+            color: white;
             padding: 10px;
             .user {
               display: inline;
@@ -85,7 +89,8 @@ $special-color: #333;
           }
           .waveform {
             height: 150px;
-            background-color: blue;
+            background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
+            background-size: contain;
           }
           .tags {
             padding: 10px;
