@@ -2,6 +2,7 @@
   
   var app = angular.module('earfulOfAngular',[]);
 
+
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
     $scope.editItem = false;
     $scope.userId = $('#user_id').attr("value");
@@ -12,7 +13,16 @@
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
       $scope.mySounds = data
       console.log($scope.mySounds);
+      $('#mySounds').addClass('selected')
     });
+
+    $scope.loadMyFeed = function(){
+      $('#myfeed').removeClass('hide');
+      $('#feedList').addClass('hide');
+      $('#feed').removeClass('selected')
+      $('#mySounds').addClass('selected')
+    }
+
 
     $scope.selectEditItem = function(item){
       $scope.editItem = item;
@@ -38,6 +48,8 @@
     $scope.loadFeed = function(){
       $('#myfeed').addClass('hide');
       $('#feedList').removeClass('hide');
+      $('#feed').addClass('selected')
+      $('#mySounds').removeClass('selected')
 
       // variables for Feed page
         $scope.publicPosts = [];
@@ -47,10 +59,7 @@
         console.log($scope.publicPosts);
       });
     }
-    $scope.loadMyFeed = function(){
-      $('#myfeed').removeClass('hide');
-      $('#feedList').addClass('hide');
-    }
+  
 
 
   }]);
