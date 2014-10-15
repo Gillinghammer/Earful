@@ -29,8 +29,9 @@
       });
     }
 
-    $scope.togglePost = function(item){
-          $("#content" + item.id).slideToggle(500, function(){});
+    $scope.togglePost = function(event){
+      // console.log($(event.target).parent('.post').find('.postContent'));
+      $(event.target).parent('.post').find('.postContent').slideToggle(500, function(){});
     }
 
     // functions for the Feed page

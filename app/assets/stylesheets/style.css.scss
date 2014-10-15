@@ -3,9 +3,11 @@ $primary-color: #333;
 $secondary-color: #999;
 $link-color: #333;
 $special-color: #333;
+$background-color: white;
 
 *{
   box-sizing: border-box;
+
 }
 .hide {
   display: none;
@@ -14,8 +16,10 @@ $special-color: #333;
   
   body {
     font-family: $font-stack;
+    background-color: $background-color;
       #myfeed {
         top: 0;
+        padding-top: 20px;
         margin-bottom: 170px;
         .post {
           min-height: 350px;
@@ -39,7 +43,7 @@ $special-color: #333;
           div.waveform {
             background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
             background-size: contain;
-            min-height: 100px;
+            min-height: 90px;
             max-width: 80%;
             margin-left: 100px;
           }
@@ -73,10 +77,11 @@ $special-color: #333;
           }
         }
         div#feedItems {
-        .item {
+        .post {
           padding: 20px 0;
+          text-align: center;
           .itemInfo {
-            background-color: $secondary-color;
+            background-color: $primary-color;
             color: white;
             padding: 10px;
             .user {
@@ -88,7 +93,7 @@ $special-color: #333;
             }
           }
           .waveform {
-            height: 150px;
+            height: 90px;
             background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
             background-size: contain;
           }
@@ -96,10 +101,17 @@ $special-color: #333;
             padding: 10px;
           }
           .title {
-            padding: 10px;
+            display: block;
+            color: $primary-color;
+            margin:0;
+            padding:0;
+            text-decoration: underline;
+            cursor: pointer;
+            padding-top: 20px;
           }
-          .content {
+          .postContent {
             padding: 10px;
+            display: none;
           }
         }
         }
@@ -112,8 +124,7 @@ $special-color: #333;
           width: 100%;
           td {
             cursor: pointer;
-            background-color: black;
-            
+            background-color: $primary-color;
             text-align: center;
             color: white;
             padding: 0;
