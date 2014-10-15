@@ -2,7 +2,7 @@
 
 <!-- My Feed Section -->
 <div id="myfeed">
-  <div class="post" ng-repeat="item in mySounds track by $index | orderBy : created_at ">
+  <div class="post animated fadeInUp" ng-repeat="item in mySounds track by $index | orderBy : created_at ">
     <div class="datebox" ng-hide="editItem === item">
       <div class="day">
         {{ item.created_at | date:'dd' }}
@@ -17,14 +17,7 @@
     <div ng-hide="editItem === item" class="postContent">{{ item.content }}</div>
     <textarea ng-show="editItem === item" ng-model="item.content"></textarea><br>
     <p ng-hide="editItem === item"><audio src="{{ item.sound.url }}" controls></audio></p>
-    <!-- <p ng-hide="editItem === item">Public: {{ item.public }}</p> -->
-    <div class="onoffswitch" ng-hide="editItem === item">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-        <label class="onoffswitch-label" for="myonoffswitch">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-        </label>
-    </div><br>
+    <p ng-hide="editItem === item">Public: {{ item.public }}</p>
     <p ng-show="editItem === item"><input type="checkbox" name="Public?" ng-model="item.public">Public?</p>
     <button ng-hide="editItem === item" ng-click="selectEditItem(item)">Edit</button>
     <button ng-show="editItem === item" ng-click="selectUpdateItem(item)">Update</button>
@@ -35,10 +28,11 @@
 <div id="feedList" class="hide">
   <div id="searchbar">
     <h3>EARFULS</h3>
-      <input type="text" name="search" placeholder="Search by Tags" id="search">
+      <input type="text" name="search" placeholder="Search by Tags" id="search" ng-model="searchContent">
   </div>
   <div id="feedItems">
-    <div class="post" ng-repeat="item in publicPosts track by $index | orderBy : created_at">
+    <div class="post animated fadeInUp" ng-repeat="item in publicPosts | filter:searchContent">
+
       <div class="itemInfo">
         <div class="user">Gillinghammer</div>
         <div class="createdAt">{{ item.created_at | date:'MMM dd, y' }}</div>
@@ -47,6 +41,7 @@
       <div class="tags">{{ item.tags }}</div>
       <div class="title" ng-click="togglePost($event)">{{ item.title }}</div>
       <div class="postContent">{{ item.content }}</div>
+
     </div>
   </div>
 </div>

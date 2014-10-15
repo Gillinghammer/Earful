@@ -1,9 +1,9 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
-$secondary-color: #999;
-$link-color: #333;
+$font-stack: 'Roboto Slab', serif;
+$primary-color: #F2385A;
+$secondary-color: #3AA1BF;
+$text-color: #333;
 $special-color: #333;
-$background-color: white;
+$background-color: #E9F1DF;
 
 *{
   box-sizing: border-box;
@@ -20,7 +20,7 @@ $background-color: white;
       #myfeed {
         top: 0;
         padding-top: 20px;
-        margin-bottom: 170px;
+        margin-bottom: 100px;
         .post {
           min-height: 350px;
           text-align: center;
@@ -28,24 +28,27 @@ $background-color: white;
             margin: 0 10px;
             background-color: $primary-color;
             color: white;
-            width: 90px;
-            height: 90px;
-            border: 3px solid $secondary-color;
+            width: 100px;
+            height: 100px;
+            border: 5px solid $secondary-color;
             float: left;
+            font-weight: 100;
             div.day {
               font-size: 2em;
               padding-top: 10px;
+              margin: 0;
             }
             div.monthyear {
-              padding-top: 10px;
+              padding: 10px 0;
+              margin: 0;
             }
           }
           div.waveform {
             background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
             background-size: contain;
-            min-height: 90px;
+            min-height: 100px;
             max-width: 80%;
-            margin-left: 100px;
+            margin-left: 110px;
           }
         
           .title {
@@ -59,7 +62,10 @@ $background-color: white;
           }
             .postContent {
               display: none;
-              padding-top: 20px;
+              padding: 20px;
+              color: $text-color;
+              font-weight: 300;
+              line-height: 1.5em;
           }
         }
       }
@@ -67,13 +73,19 @@ $background-color: white;
         top: 0;
         margin-bottom: 170px;
         #searchbar {
+          h3 {
+            color: $secondary-color;
+            font-weight: 700;
+            font-size: 1.75em;
+            padding:0;
+          }
           display: block;
           text-align: center;
           width: 100%;
           input#search {
             width: 100%;
             height: 50px;
-            padding: 10px;
+            padding-bottom: 10px;
           }
         }
         div#feedItems {
@@ -84,6 +96,7 @@ $background-color: white;
             background-color: $primary-color;
             color: white;
             padding: 10px;
+            border-bottom: 5px solid $secondary-color;
             .user {
               display: inline;
             }
@@ -99,6 +112,7 @@ $background-color: white;
           }
           .tags {
             padding: 10px;
+            color: $text-color;
           }
           .title {
             display: block;
@@ -110,8 +124,11 @@ $background-color: white;
             padding-top: 20px;
           }
           .postContent {
-            padding: 10px;
+            font-weight: 300;
+            padding: 20px;
             display: none;
+            color: $text-color;
+            line-height: 1.5em;
           }
         }
         }
@@ -130,7 +147,7 @@ $background-color: white;
             padding: 0;
             margin: 0;
             width: 150px;
-            height: 100px;
+            height: 70px;
             &.selected {
               background-color: $secondary-color;
               color: black;
@@ -143,63 +160,4 @@ $background-color: white;
         }
       }
     }
-  }
-
-// on/off switch
-
-  .onoffswitch {
-      position: relative; width: 133px;
-      margin: 0 auto;
-      -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-  }
-  .onoffswitch-checkbox {
-      display: none;
-  }
-  .onoffswitch-label {
-      display: block; overflow: hidden; cursor: pointer;
-      border: 2px solid #666666; border-radius: 41px;
-  }
-  .onoffswitch-inner {
-      display: block; width: 200%; margin-left: -100%;
-      -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
-      -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
-  }
-  .onoffswitch-inner:before, .onoffswitch-inner:after {
-      display: block; float: left; width: 50%; height: 41px; padding: 0; line-height: 41px;
-      font-size: 16px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-      -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-      border-radius: 41px;
-      box-shadow: 0px 20.5px 0px rgba(0,0,0,0.08) inset;
-  }
-  .onoffswitch-inner:before {
-      content: "Public";
-      padding-left: 15px;
-      background-color: #6FED6B; color: #FFFFFF;
-      border-radius: 41px 0 0 41px;
-  }
-  .onoffswitch-inner:after {
-      content: "Private";
-      padding-right: 15px;
-      background-color: #FFFFFF; color: #666666;
-      text-align: right;
-      border-radius: 0 41px 41px 0;
-  }
-  .onoffswitch-switch {
-      display: block; width: 41px; margin: 0px;
-      background: #FFFFFF;
-      border: 2px solid #666666; border-radius: 41px;
-      position: absolute; top: 0; bottom: 0; right: 88px;
-      -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
-      -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
-      background-image: -moz-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 80%); 
-      background-image: -webkit-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 80%); 
-      background-image: -o-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 80%); 
-      background-image: linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 80%);
-      box-shadow: 0 1px 1px white inset;
-  }
-  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-      margin-left: 0;
-  }
-  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-      right: 0px; 
   }
