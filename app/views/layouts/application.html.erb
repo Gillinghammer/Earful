@@ -7,10 +7,18 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body ng-controller="FeedController as feed">
   <p class="notice"><%= notice%></p>
     <p class="alert"><%= alert%></p>
 <%= yield %>
-
+<div id="navigation">
+<table>
+<tr>
+  <td id="feed" ng-click="loadFeed()">Feed</td>
+  <td id="myfeed" class="selected" ng-click="loadMyFeed()">My Sounds</td>
+  <td id="settings">Settings</td>
+</tr>
+</table>
+</div>
 </body>
 </html>

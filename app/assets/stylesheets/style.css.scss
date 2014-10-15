@@ -1,27 +1,31 @@
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
-$secondary-color: #333;
+$secondary-color: #999;
 $link-color: #333;
 $special-color: #333;
 
 *{
   box-sizing: border-box;
 }
-
+.hide {
+  display: none;
+}
 @media only screen and (max-width: 479px) {
   
   body {
     font-family: $font-stack;
-      padding: 0 10px;
       #myfeed {
-        max-width: 479px;
+        top: 0;
         .post {
           min-height: 350px;
           text-align: center;
           div.datebox {
+            margin: 0 10px;
+            background-color: $primary-color;
+            color: white;
             width: 90px;
             height: 90px;
-            border: 1px solid black;
+            border: 3px solid $secondary-color;
             float: left;
             div.day {
               font-size: 2em;
@@ -54,7 +58,74 @@ $special-color: #333;
           }
         }
       }
-
+      #feedList {
+        top: 0;
+        #searchbar {
+          display: block;
+          text-align: center;
+          width: 100%;
+          input#search {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+          }
+        }
+        div#feedItems {
+        .item {
+          .itemInfo {
+            border-bottom: 1px solid black;
+            padding: 10px;
+            .user {
+              display: inline;
+            }
+            .createdAt {
+              display: inline;
+              float: right;
+            }
+          }
+          .waveform {
+            height: 150px;
+            background-color: blue;
+          }
+          .tags {
+            padding: 10px;
+          }
+          .title {
+            padding: 10px;
+          }
+          .content {
+            padding: 10px;
+          }
+        }
+        }
+      }
+      #navigation {
+        position: fixed;
+        bottom:0;
+        width: 100%;
+        table {
+          width: 100%;
+          td {
+            cursor: pointer;
+            background-color: black;
+            
+            text-align: center;
+            color: white;
+            padding: 0;
+            margin: 0;
+            width: 150px;
+            height: 100px;
+            &.selected {
+              background-color: $secondary-color;
+              color: black;
+            }
+            &:hover {
+              font-weight: bold;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
     }
   }
 

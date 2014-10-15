@@ -3,18 +3,12 @@
   var app = angular.module('earfulOfAngular',[]);
 
   app.controller('FeedController', function($scope, $http) {
-
     $scope.feedItems = [];
     $scope.editItem = false;
     $scope.userId = $('#user_id').attr("value");
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
       $scope.feedItems = data
       console.log($scope.feedItems);
-      // load audiojs
-      // audiojs.events.ready(function() {
-      //     var as = audiojs.createAll();
-      //   });
-
     });
 
     $scope.selectEditItem = function(item){
@@ -35,6 +29,17 @@
     $scope.togglePost = function(item){
           $("#content" + item.id).slideToggle(500, function(){});
     }
+
+    // functions for the Feed page
+    $scope.loadFeed = function(){
+      $('#myfeed').addClass('hide');
+      $('#feedList').removeClass('hide');
+    }
+    $scope.loadMyFeed = function(){
+      $('#myfeed').removeClass('hide');
+      $('#feedList').addClass('hide');
+    }
+
 
   });
 

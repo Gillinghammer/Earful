@@ -1,6 +1,8 @@
 <%= hidden_field(:user, :id) %>
-<div id="myfeed" ng-controller="FeedController as feed">
-  <div class="post" ng-repeat="item in feedItems track by $index | orderBy : created_at">
+
+<!-- My Feed Section -->
+<div id="myfeed">
+  <div class="post" ng-repeat="item in feedItems track by $index | orderBy : created_at ">
     <div class="datebox" ng-hide="editItem === item">
       <div class="day">
         {{ item.created_at | date:'dd' }}
@@ -29,4 +31,25 @@
   </div>
 </div>
 
-
+<!-- Feed Section -->
+<div id="feedList" class="hide">
+  <div id="searchbar">
+    <h3>EARFULS</h3>
+      <input type="text" name="search" placeholder="Search by Tags" id="search">
+  </div>
+  <div id="feedItems">
+    <div class="item" >
+      <div class="itemInfo">
+        <div class="user">Gillinghammer</div>
+        <div class="createdAt">5 sec ago</div>
+      </div>
+      <div class="waveform"></div>
+      <div class="tags">#London #Market #Traffic</div>
+      <div class="title">Sounds of My Morning Commute</div>
+      <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</div>
+    </div>
+  </div>
+</div>
