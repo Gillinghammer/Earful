@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-animate
+//= require bluebird
+//= require lodash
+//= require angular_google_maps
 //= require_tree .
