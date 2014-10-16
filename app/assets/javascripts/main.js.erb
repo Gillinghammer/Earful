@@ -1,12 +1,13 @@
 (function() {  
-  
-  var app = angular.module('earfulOfAngular',[]);
+
+  var app = angular.module('earfulOfAngular',['ngMap']);
 
 
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
     $scope.editItem = false;
     $scope.userId = $('#user_id').attr("value");
 
+    $scope.map = {};
     // variables for MySounds page
     $scope.mySounds = [];
     // Get request to retreive mySounds
@@ -19,6 +20,7 @@
     $scope.loadMyFeed = function(){
       $('#myfeed').removeClass('hide');
       $('#feedList').addClass('hide');
+      $('#mapOfSounds').addClass('hide');
       $('#feed').removeClass('selected')
       $('#mySounds').addClass('selected')
     }
@@ -47,19 +49,36 @@
     // functions for the Feed page
     $scope.loadFeed = function(){
       $('#myfeed').addClass('hide');
+      $('#mapOfSounds').addClass('hide');
       $('#feedList').removeClass('hide');
       $('#feed').addClass('selected')
       $('#mySounds').removeClass('selected')
 
       // variables for Feed page
-        $scope.publicPosts = [];
+      $scope.publicPosts = [];
       // Get request to retreive publicPosts
       $http.get('/posts.json').success(function(data){
         $scope.publicPosts = data
         console.log($scope.publicPosts);
       });
     }
-  
+    
+    $scope.loadMap = function(){ 
+      $('#myfeed').addClass('hide');
+      $('#mapLink').addClass('selected');
+      $('#mapOfSounds').removeClass('hide');
+
+      $scope.$on('mapInitialized', function(event, map) {
+        map.setCenter({
+          center: {
+            latitude: 45,
+            longitude: -73
+          },
+          zoom: 8
+
+        });
+      });
+    }
 
 
   }]);
