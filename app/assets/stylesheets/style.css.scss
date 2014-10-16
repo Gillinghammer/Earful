@@ -21,10 +21,34 @@ input {
   body {
     font-family: $font-stack;
     background-color: $background-color;
+
+      #topnav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $secondary-color;
+        z-index: 2;
+        #view {
+          padding: 15px;
+          text-align: center;
+          span {
+            color: $text-color;
+            padding: 0 10px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+      #mapOfSounds {
+        position: relative;
+        top: 0;
+        margin: 70px 0 50px 0;
+        z-index: 2;
+        .angular-google-map-container { height: 400px; }
+      }
       #myfeed {
         top: 0;
-        padding-top: 20px;
-        margin-bottom: 100px;
+        margin: 70px 0 100px 0;
         .post {
           min-height: 350px;
           text-align: center;
@@ -178,7 +202,7 @@ input {
             padding: 0;
             margin: 0;
             width: 150px;
-            height: 70px;
+            height: 50px;
             &.selected {
               transition: 0.5s;
               background-color: $secondary-color;
