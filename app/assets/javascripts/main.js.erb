@@ -1,26 +1,40 @@
 (function() {  
   
-  var app = angular.module('earfulOfAngular',[]);
+  var app = angular.module('earfulOfAngular',['google-maps'.ns()]);
 
+  //'GoogleMapApiProvider'.ns() == 'uiGmapGoogleMapApiProvider'
+      app.config(['GoogleMapApiProvider'.ns(), function (GoogleMapApi) {
+          GoogleMapApi.configure({
+              //    key: 'your api key',
+              v: '3.17',
+              libraries: 'weather,geometry,visualization'
+          });
+      }])
 
-  app.controller('FeedController', ['$scope','$http', function($scope, $http) {
+  app.controller('FeedController', ['$scope','$http', 'GoogleMapApi'.ns(),function($scope, $http, GoogleMapApi) {
     $scope.editItem = false;
     $scope.userId = $('#user_id').attr("value");
-
+    $scope.map = {
+      center: {
+          latitude: 45,
+          longitude: -73
+      },
+      zoom: 8
+    };
     // variables for MySounds page
     $scope.mySounds = [];
     // Get request to retreive mySounds
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
-      $scope.mySounds = data
+      $scope.mySounds = data;
       console.log($scope.mySounds);
-      $('#mySounds').addClass('selected')
+      $('#mySounds').addClass('selected');
     });
 
     $scope.loadMyFeed = function(){
       $('#myfeed').removeClass('hide');
       $('#feedList').addClass('hide');
-      $('#feed').removeClass('selected')
-      $('#mySounds').addClass('selected')
+      $('#feed').removeClass('selected');
+      $('#mySounds').addClass('selected');
     }
 
 
@@ -48,8 +62,8 @@
     $scope.loadFeed = function(){
       $('#myfeed').addClass('hide');
       $('#feedList').removeClass('hide');
-      $('#feed').addClass('selected')
-      $('#mySounds').removeClass('selected')
+      $('#feed').addClass('selected');
+      $('#mySounds').removeClass('selected');
 
       // variables for Feed page
         $scope.publicPosts = [];
@@ -58,6 +72,26 @@
         $scope.publicPosts = data
         console.log($scope.publicPosts);
       });
+    }
+
+    $scope.loadMap = function(){ 
+      $('#myfeed').addClass('hide');
+      $('#mapLink').addClass('selected');
+      $("#wrapper").append('<div id="mapOfSounds">' +
+          '<ui-gmap-google-map center="map.center" zoom="map.zoom">' +
+          '</ui-gmap-google-map>' +
+        '</div>');
+      $scope.markers = [];
+      console.log(GoogleMapApi);
+      GoogleMapApi.then(function(maps) {
+
+        console.log(maps);
+        google.maps.event.trigger(maps, 'resize');
+
+      });
+
+      
+
     }
   
 
