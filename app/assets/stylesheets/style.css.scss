@@ -7,8 +7,12 @@ $background-color: #E9F1DF;
 
 *{
   box-sizing: border-box;
-
 }
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
 .hide {
   display: none;
 }
@@ -16,6 +20,9 @@ input {
   display: block;
   margin: 0 auto;
 }
+
+
+
 @media only screen and (max-width: 479px) {
   
   body {
@@ -40,11 +47,14 @@ input {
         }
       }
       #mapOfSounds {
-        position: relative;
-        top: 0;
-        margin: 70px 0 50px 0;
-        z-index: 2;
-        map { height: 400px; }
+        min-height: 100%;
+        height: 100%;
+        margin: -50px 0;
+        overflow: hidden;
+        map {
+          height: 100%;
+          min-height: 100%;
+        }
       }
       #myfeed {
         top: 0;
