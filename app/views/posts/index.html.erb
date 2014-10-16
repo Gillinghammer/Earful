@@ -1,5 +1,11 @@
 <%= hidden_field(:user, :id) %>
-
+<div id="wrapper">
+<!-- top nav -->
+<div id="topnav">
+  <div id="view">
+  <span id="listLink" ng-click="loadMyFeed()">List</span><span id="mapLink" ng-click="loadMap()">Map</span>
+  </div>
+</div>
 <!-- My Feed Section -->
 <div id="myfeed">
   <div class="post animated fadeInUp" ng-repeat="item in mySounds track by $index | orderBy : created_at ">
@@ -50,4 +56,5 @@
 
     </div>
   </div>
+</div>
 </div>
