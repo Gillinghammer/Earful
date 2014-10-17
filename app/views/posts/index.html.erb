@@ -21,7 +21,7 @@
     </div>
     <div class="waveform"></div>
     <input ng-show="editItem === item" type="text" ng-model="item.location" placeholder="Location">
-    <p ng-hide="editItem === item"><audio src="{{ item.sound.url }}" controls></audio></p>
+    <p ng-hide="editItem === item"><audio src="{{ item.sound.sound.url }}" controls></audio></p>
     <h3 class="title" ng-hide="editItem === item" ng-click="togglePost($event)">{{ item.title }}</h3>
     <input ng-show="editItem === item" type="text" ng-model="item.title" placeholder="Title">
     <div ng-hide="editItem === item" class="postContent">{{ item.content }}</div>
@@ -30,6 +30,7 @@
     <p ng-show="editItem === item"><input type="checkbox" name="Public?" ng-model="item.public">Public?</p>
     <button ng-hide="editItem === item" ng-click="selectEditItem(item)">Edit</button>
     <button ng-show="editItem === item" ng-click="selectUpdateItem(item)">Update</button>
+    <!-- <button ng-show="editItem === item" ng-click="selectDeleteItem(item)">Delete</button> -->
   </div>
 </div>
 
@@ -48,7 +49,7 @@
         <div class="clearfix"></div>
       </div>
       <div class="waveform"></div>
-      <audio src="{{ item.sound.url }}" controls></audio>
+      <audio src="{{ item.sound.sound.url }}" controls></audio>
       <div class="tags">{{ item.tags }}</div>
       <div class="title" ng-click="togglePost($event)">{{ item.title }}</div>
       <div class="postContent">{{ item.content }}</div>

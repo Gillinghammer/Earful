@@ -2,7 +2,6 @@
 
   var app = angular.module('earfulOfAngular',['ngMap']);
 
-
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
     $scope.editItem = false;
     starting_point = (document.URL).indexOf('/users/') + 7;
@@ -11,6 +10,8 @@
 
     $scope.map = {};
     $scope.markers = [];
+
+
     // variables for MySounds page
     $scope.mySounds = [];
     // Get request to retreive mySounds
@@ -26,7 +27,11 @@
       $('#mapOfSounds').addClass('hide');
       $('#feed').removeClass('selected')
       $('#mySounds').addClass('selected')
+
+
     }
+
+    
 
 
     $scope.selectEditItem = function(item){
@@ -37,10 +42,8 @@
       $http.put('/users/'+ $scope.userId + '/posts/' + item.id + '.json', item ).success(function(data){
         $scope.editItem = 0;
         var index = $scope.mySounds.indexOf(item);
-        console.log('Index equals: ' + index);
-        $scope.mySounds.splice(index, 1, data);
-        
-        console.log(data);
+        console.log(data.post);
+        $scope.mySounds.splice(index, 1, data.post);
       });
     }
 
@@ -94,6 +97,17 @@
           
       });
 
+      $scope.$on('mapInitialized', function(event, map) {
+        $scope.map.setCenter({
+          center: {
+            latitude: 45,
+            longitude: -73
+          },
+          zoom: 8
+
+        });
+      });
+      
     }
 
 
