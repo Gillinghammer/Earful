@@ -9,10 +9,11 @@ Earful::Application.routes.draw do
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
     resources :users do 
       resources :posts
+      get 'followed', to: 'users/feeds#followed'
     end
   end
 
-  resources :posts, only: [:index, :new, :create]
+  resources :posts, only: [:index, :new, :create ]
 
   mount_griddler
 

@@ -5,7 +5,9 @@
 
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
     $scope.editItem = false;
-    $scope.userId = $('#user_id').attr("value");
+    starting_point = (document.URL).indexOf('/users/') + 7;
+    ending_point = (document.URL).search('/posts');
+    $scope.userId = (document.URL).substring(starting_point,ending_point);
 
     $scope.map = {};
     $scope.markers = [];
@@ -13,7 +15,7 @@
     $scope.mySounds = [];
     // Get request to retreive mySounds
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
-      $scope.mySounds = data
+      $scope.mySounds = data.posts
       console.log($scope.mySounds);
       $('#mySounds').addClass('selected')
     });
@@ -43,7 +45,7 @@
     }
 
     $scope.togglePost = function(event){
-      // console.log($(event.target).parent('.post').find('.postContent'));
+      // locate the class postConent within the post item and toggle it shown or hidden
       $(event.target).parent('.post').find('.postContent').slideToggle(500, function(){});
     }
 
@@ -56,11 +58,10 @@
       $('#mySounds').removeClass('selected')
 
       // variables for Feed page
-      $scope.publicPosts = [];
+      $scope.followedPosts = [];
       // Get request to retreive publicPosts
-      $http.get('/posts.json').success(function(data){
-        $scope.publicPosts = data
-        console.log($scope.publicPosts);
+      $http.get('/users/'+ $scope.userId +'/followed.json').success(function(data){
+        $scope.followedPosts = data.feeds
       });
     }
     
@@ -69,9 +70,12 @@
       $('#mapLink').addClass('selected');
       $('#mapOfSounds').removeClass('hide');
 
+      $scope.audioIcon = "/audioIcon.png"
+
+      $scope.mapStyle = [{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]}]
+
       var geocoder = new google.maps.Geocoder();
       $.each( $scope.mySounds, function( index, value ){
-          console.log("currently geocoding record " + index)
            geocoder.geocode({
               'address': value.location
            }, 
@@ -92,9 +96,6 @@
 
     }
 
-    $scope.audioIcon = "/audioIcon.png"
-
-    $scope.mapStyle = [{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]}]
 
   }]);
 
