@@ -8,6 +8,7 @@
     $scope.userId = $('#user_id').attr("value");
 
     $scope.map = {};
+    $scope.markers = [];
     // variables for MySounds page
     $scope.mySounds = [];
     // Get request to retreive mySounds
@@ -68,18 +69,32 @@
       $('#mapLink').addClass('selected');
       $('#mapOfSounds').removeClass('hide');
 
-      $scope.$on('mapInitialized', function(event, map) {
-        map.setCenter({
-          center: {
-            latitude: 45,
-            longitude: -73
-          },
-          zoom: 8
-
-        });
+      var geocoder = new google.maps.Geocoder();
+      $.each( $scope.mySounds, function( index, value ){
+          console.log("currently geocoding record " + index)
+           geocoder.geocode({
+              'address': value.location
+           }, 
+           function(results, status) {
+              if(status == google.maps.GeocoderStatus.OK) {
+                 new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    icon: $scope.audioIcon,
+                    title: value.location,
+                    map: $scope.map
+                 });
+                 $scope.map.setCenter(results[0].geometry.location);
+                 $scope.map.setOptions({styles: $scope.mapStyle});
+              }
+           });
+          
       });
+
     }
 
+    $scope.audioIcon = "/audioIcon.png"
+
+    $scope.mapStyle = [{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]}]
 
   }]);
 
