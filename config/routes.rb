@@ -7,6 +7,7 @@ Earful::Application.routes.draw do
   devise_scope :user do
     get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+    get 'fetch_users', to: 'users/feeds#fetch_users'
     resources :users do 
       resources :posts
       get 'followed', to: 'users/feeds#followed'

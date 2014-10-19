@@ -18,11 +18,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def followed
-      respond_with(User.find(params[:user_id]).following.first.posts )
-      #TODO fix this to return all posts of followed user
-  end
-
   def new
     @post = Post.new
     respond_to do |format|

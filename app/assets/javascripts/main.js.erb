@@ -31,9 +31,6 @@
 
     }
 
-    
-
-
     $scope.selectEditItem = function(item){
       $scope.editItem = item;
     }
@@ -62,9 +59,24 @@
 
       // variables for Feed page
       $scope.followedPosts = [];
-      // Get request to retreive publicPosts
+      //Get request to retreive publicPosts
       $http.get('/users/'+ $scope.userId +'/followed.json').success(function(data){
-        $scope.followedPosts = data.feeds
+        $scope.followedPosts = data.feeds;
+      });
+    }
+
+    $scope.searchUsers  = function(){
+
+      $('#myfeed').addClass('hide');
+      $('#mapOfSounds').addClass('hide');
+      $('#feedList').addClass('hide');
+      $('#userSearch').removeClass('hide')
+
+      $scope.users = [];
+
+      $http.get('/fetch_users.json').success(function(data){
+        $scope.users = data.feeds;
+        console.log($scope.users)
       });
     }
     

@@ -2,7 +2,7 @@
 <!-- top nav -->
 <div id="topnav">
   <div id="view">
-  <span id="listLink" ng-click="loadMyFeed()">List</span><span id="mapLink" ng-click="loadMap()">Map</span>
+  <span id="listLink" ng-click="loadMyFeed()">List</span><span id="mapLink" ng-click="loadMap()">Map</span><span id="searchUsers" ng-click="searchUsers()">Search for User</span>
   </div>
 </div>
 <!-- My Feed Section -->
@@ -60,4 +60,14 @@
 <!-- Maps Section -->
 <div id="mapOfSounds">
   <map zoom="3" center="[40.74, -74.18]" ></map>
+</div>
+<!-- User Search -->
+<div id="userSearch" class="hide">
+  <div id="userList" ng-repeat="user in users">
+    <div class="user">
+      <div class="avatar">{{ user.avatar }}</div>
+      <div class="name"><a href="#">{{ user.user_name }}</a></div>
+      <div class="follow"><span>follow</span></div>
+    </div>
+  </div>
 </div>
