@@ -1,33 +1,89 @@
 (function() {  
 
-  var app = angular.module('earfulOfAngular',['ngMap']);
+  var app = angular.module('earfulOfAngular',['ngMap'])
+  
+  //DIRECTIVE to call my createWave function once my repeat is over
+  .directive('onLastRepeat', function() {
+          return function(scope, element, attrs) {
+              if (scope.$last) setTimeout(function(){
+                  scope.$emit('onRepeatLast', element, attrs);
+              }, 1);
+          };
+      })
+
+
 
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
+    // variable used to toggle edit inputs
     $scope.editItem = false;
+    // starting and ending points used to determine user id from URL
     starting_point = (document.URL).indexOf('/users/') + 7;
     ending_point = (document.URL).search('/posts');
     $scope.userId = (document.URL).substring(starting_point,ending_point);
+    // variable used to determine if the play or stop button should be shown, set to false on load
     $scope.playingSound = false;
+    // an empty map object
     $scope.map = {};
+    // an empty array for the location markers
     $scope.markers = [];
 
     // variables for MySounds page
     $scope.mySounds = [];
+    $scope.myWaves = {};
+
+    // I REALLY NEED TO MOVE THIS INTO MY LOADMYFEED FUNCTION
+
+    $scope.$on('onRepeatLast', function(scope, element, attrs){
+             $scope.createWave($scope.mySounds);
+             $('#mapOfSounds').addClass('hide');
+
+          });
     // Get request to retreive mySounds
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
       $scope.mySounds = data.posts
       console.log($scope.mySounds);
-      
-      $('#mySounds').addClass('selected')      
+      $('#mySounds').addClass('selected')
     });
 
     $scope.loadMyFeed = function(){
+      // I REALLY NEED TO MOVE THIS INTO MY LOADMYFEED FUNCTION
+      // Get request to retreive mySounds
+      $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
+        $scope.mySounds = data.posts
+        console.log($scope.mySounds);
+        $('#mySounds').addClass('selected')
+      });
+
       $('#myfeed').removeClass('hide');
       $('#feedList').addClass('hide');
       $('#mapOfSounds').addClass('hide');
       $('#feed').removeClass('selected')
       $('#mySounds').addClass('selected')
       $scope.createWave($scope.mySounds);
+
+    };
+
+    $scope.createWave = function(mySounds){
+
+      $.each($scope.mySounds, function(index, value){
+        $scope.myWaves[value.user_id + value.sound.sound.url] = Object.create(WaveSurfer);
+
+        $scope.myWaves[value.user_id + value.sound.sound.url].init({
+            container: document.querySelector('#waveform_'+value.id),
+            waveColor: 'rgba(126,130,122,1)',
+            progressColor: 'rgba(47,52,59,1)',
+            hideScrollbar: true,
+            interact: false,
+            normalize: true,
+            scrollParent: true
+        });
+
+
+      });
+
+      console.log('myWaves looks like')
+      console.log($scope.myWaves)
+
     }
 
     $scope.selectEditItem = function(item){
@@ -101,33 +157,34 @@
 
     $scope.stopSound = function(item){
       
-      $scope.soundwave.stop();
+      $scope.myWaves[item.user_id + item.sound.sound.url].stop();
       $scope.playingSound = false;
 
     }
 
     $scope.playSound = function(item){ 
+      console.log('play function')
+      $scope.playingSound = true;
+      //  $scope.soundwave = Object.create(WaveSurfer);
+       // $scope.soundwave.init({
+       //     container: document.querySelector('.waveform_'+item.id),
+       //     waveColor: 'rgba(126,130,122,1)',
+       //     progressColor: 'rgba(47,52,59,1)',
+       //     hideScrollbar: true,
+       //     interact: false,
+       //     normalize: true,
+       //     scrollParent: true
+       // });
 
-       $scope.soundwave = Object.create(WaveSurfer);
-       $scope.soundwave.init({
-           container: document.querySelector('.waveform_'+item.id),
-           waveColor: 'rgba(126,130,122,1)',
-           progressColor: 'rgba(47,52,59,1)',
-           hideScrollbar: true,
-           interact: false,
-           normalize: true,
-           scrollParent: true
-       });
+      $scope.myWaves[item.user_id + item.sound.sound.url].load(item.sound.sound.url);        
 
-       $scope.soundwave.load(item.sound.sound.url);        
-
-      $scope.soundwave.on('ready', function () {
-          $scope.soundwave.play();
+      $scope.myWaves[item.user_id + item.sound.sound.url].on('ready', function () {
+          $scope.myWaves[item.user_id + item.sound.sound.url].play();
           console.log("Sound playing");
-          $scope.playingSound = true;
+          
       });
 
-      $scope.soundwave.on('finish', function(){
+      $scope.myWaves[item.user_id + item.sound.sound.url].on('finish', function(){
         console.log("Sound finished");
         $scope.playingSound = false;
       });

@@ -21,14 +21,6 @@ input {
   margin: 0 auto;
 }
 
-canvas, wave {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-
-
 @media only screen and (max-width: 479px) {
   
   body {
@@ -103,7 +95,7 @@ canvas, wave {
             // background-size: contain;
             height: 100px;
             max-width: 80%;
-            margin-left: 110px;
+            padding: 10px 20px;
           }
         
           .title {
