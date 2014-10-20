@@ -17,7 +17,8 @@
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
       $scope.mySounds = data.posts
       console.log($scope.mySounds);
-      $('#mySounds').addClass('selected')
+      
+      $('#mySounds').addClass('selected')      
     });
 
     $scope.loadMyFeed = function(){
@@ -26,7 +27,7 @@
       $('#mapOfSounds').addClass('hide');
       $('#feed').removeClass('selected')
       $('#mySounds').addClass('selected')
-
+      $scope.createWave($scope.mySounds);
     }
 
     $scope.selectEditItem = function(item){
@@ -99,29 +100,39 @@
     }
 
     $scope.stopSound = function(item){
-      $scope.playingSound = false;
+      
       $scope.soundwave.stop();
-      $('#waveform_'+item.id).empty();
+      $scope.playingSound = false;
+
     }
 
     $scope.playSound = function(item){ 
-     $scope.playingSound = true;
-      $scope.soundwave = Object.create(WaveSurfer);
-      $scope.soundwave.init({
-          container: document.querySelector('#waveform_'+item.id),
-          waveColor: 'rgba(126,130,122,1)',
-          progressColor: 'rgba(47,52,59,1)'
-      });
 
-      $scope.soundwave.load(item.sound.sound.url);
+       $scope.soundwave = Object.create(WaveSurfer);
+       $scope.soundwave.init({
+           container: document.querySelector('.waveform_'+item.id),
+           waveColor: 'rgba(126,130,122,1)',
+           progressColor: 'rgba(47,52,59,1)',
+           hideScrollbar: true,
+           interact: false,
+           normalize: true,
+           scrollParent: true
+       });
+
+       $scope.soundwave.load(item.sound.sound.url);        
 
       $scope.soundwave.on('ready', function () {
           $scope.soundwave.play();
-          
-          console.log($scope.playingSound);
+          console.log("Sound playing");
+          $scope.playingSound = true;
       });
 
+      $scope.soundwave.on('finish', function(){
+        console.log("Sound finished");
+        $scope.playingSound = false;
+      });
     }
+
     
     $scope.loadMap = function(){ 
       $('#myfeed').addClass('hide');

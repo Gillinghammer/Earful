@@ -21,6 +21,12 @@ input {
   margin: 0 auto;
 }
 
+canvas, wave {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 
 
 @media only screen and (max-width: 479px) {
@@ -95,7 +101,7 @@ input {
           div.waveform {
             // background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
             // background-size: contain;
-            min-height: 100px;
+            height: 100px;
             max-width: 80%;
             margin-left: 110px;
           }
