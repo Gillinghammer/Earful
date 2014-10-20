@@ -19,13 +19,15 @@
       </div>
       <div class="location" ng-hide="editItem === item">{{ item.location }}</div>
     </div>
-    <div class="waveform"></div>
+    <div id="waveform_{{item.id}}" class="waveform">
+      <canvas></canvas>
+    </div>
     <input ng-show="editItem === item" type="text" ng-model="item.location" placeholder="Location">
-    <p ng-hide="editItem === item">
+    <div ng-hide="editItem === item">
       <!-- <audio src="{{ item.sound.sound.url }}" controls></audio> -->
-      <h5 ng-click="buildSound(item.sound.sound)" ng-hide="playingSound">Play sound</h5>
-      <h5 ng-click="stopSound(item.sound.sound)" ng-show="playingSound">Stop sound</h5>
-    </p>
+      <h5 ng-click="playSound(item)" ng-hide="playingSound">Play sound</h5>
+      <h5 ng-click="stopSound(item)" ng-show="playingSound">Stop sound</h5>
+    </div>
     <h3 class="title" ng-hide="editItem === item" ng-click="togglePost($event)">{{ item.title }}</h3>
     <input ng-show="editItem === item" type="text" ng-model="item.title" placeholder="Title">
     <div ng-hide="editItem === item" class="postContent">{{ item.content }}</div>
@@ -52,8 +54,9 @@
         <div class="createdAt">{{ item.created_at | date:'MMM dd, y' }}</div>
         <div class="clearfix"></div>
       </div>
-      <div class="waveform"></div>
-      <audio src="{{ item.sound.sound.url }}" controls></audio>
+      <div id="waveform_{{item.id}}" class="waveform"></div>
+      <h5 ng-click="playSound(item)" ng-hide="playingSound">Play sound</h5>
+            <h5 ng-click="stopSound(item)" ng-show="playingSound">Stop sound</h5>
       <div class="tags">{{ item.tags }}</div>
       <div class="title" ng-click="togglePost($event)">{{ item.title }}</div>
       <div class="postContent">{{ item.content }}</div>

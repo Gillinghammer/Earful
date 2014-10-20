@@ -7,10 +7,9 @@
     starting_point = (document.URL).indexOf('/users/') + 7;
     ending_point = (document.URL).search('/posts');
     $scope.userId = (document.URL).substring(starting_point,ending_point);
-
+    $scope.playingSound = false;
     $scope.map = {};
     $scope.markers = [];
-
 
     // variables for MySounds page
     $scope.mySounds = [];
@@ -27,7 +26,6 @@
       $('#mapOfSounds').addClass('hide');
       $('#feed').removeClass('selected')
       $('#mySounds').addClass('selected')
-
 
     }
 
@@ -100,29 +98,29 @@
       });
     }
 
-    $scope.buildSound = function(sound){ 
-      $scope.stopSound();
-      console.log('building a sound now');
-      console.log(sound);
-      soundManager.createSound({
-        id: sound.url,
-        url: sound.url,
-        autoLoad: true,
-        autoPlay: false
-      });
-      $scope.playSound(sound);
-    }
-
-    $scope.playSound = function(sound) {
-      soundManager.play(sound.url);
-      $scope.playingSound = true;
-    }
-
-    $scope.stopSound = function(sound){
-      soundManager.stopAll();
+    $scope.stopSound = function(item){
       $scope.playingSound = false;
-      // console.log(sound.url);
-      // soundManager.stop(sound.url);
+      $scope.soundwave.stop();
+      $('#waveform_'+item.id).empty();
+    }
+
+    $scope.playSound = function(item){ 
+     $scope.playingSound = true;
+      $scope.soundwave = Object.create(WaveSurfer);
+      $scope.soundwave.init({
+          container: document.querySelector('#waveform_'+item.id),
+          waveColor: 'rgba(126,130,122,1)',
+          progressColor: 'rgba(47,52,59,1)'
+      });
+
+      $scope.soundwave.load(item.sound.sound.url);
+
+      $scope.soundwave.on('ready', function () {
+          $scope.soundwave.play();
+          
+          console.log($scope.playingSound);
+      });
+
     }
     
     $scope.loadMap = function(){ 

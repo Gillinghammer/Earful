@@ -28,7 +28,6 @@ input {
   body {
     font-family: $font-stack;
     background-color: $background-color;
-
       #topnav {
         position: fixed;
         top: 0;
@@ -94,8 +93,8 @@ input {
           }
 
           div.waveform {
-            background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
-            background-size: contain;
+            // background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
+            // background-size: contain;
             min-height: 100px;
             max-width: 80%;
             margin-left: 110px;
@@ -171,9 +170,11 @@ input {
             }
           }
           .waveform {
+
             height: 90px;
-            background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
-            background-size: contain;
+            // background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
+            // background-size: contain;
+
           }
           audio {
             margin-top: 10px;
