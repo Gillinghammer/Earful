@@ -44,7 +44,7 @@
     <div class="post animated fadeInUp" ng-repeat="item in followedPosts | filter:searchContent">
 
       <div class="itemInfo">
-        <div class="user">{{ item.user_name }}</div>
+        <div class="user">{{ item.user_name }} <a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a></div>
         <div class="createdAt">{{ item.created_at | date:'MMM dd, y' }}</div>
         <div class="clearfix"></div>
       </div>
@@ -66,8 +66,7 @@
   <div id="userList" ng-repeat="user in users">
     <div class="user">
       <div class="avatar">{{ user.avatar }}</div>
-      <div class="name"><a href="#">{{ user.user_name }}</a></div>
-      <div class="follow"><a href="#" ng-click="followUser(user)">follow</a></div>
+      <div class="name"><a href="#">{{ user.user_name }}</a> <a href="#" ng-click="followUser(user)" ng-hide="userId == user.id">follow</a></div>
     </div>
   </div>
 </div>

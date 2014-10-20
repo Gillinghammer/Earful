@@ -5,7 +5,7 @@ class RelationshipsController < ApplicationController
     @relationship = Relationship.new(params[:relationship])
     respond_to do |format|
       if @relationship.save
-        format.json { render json: @relationship, status: :created, location: @relationship }
+        format.json { render json: @relationship }
       else
         format.html { render action: "new" }
         format.json { render json: @relationship.errors, status: :unprocessable_entity }
@@ -13,9 +13,4 @@ class RelationshipsController < ApplicationController
     end
   end
 
-  def destroy
-    @user = Relationship.find(params[:id]).followed
-    current_user.unfollow!(@user)
-    redirect_to @user
-  end
 end

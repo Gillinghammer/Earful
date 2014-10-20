@@ -90,6 +90,15 @@
         console.log("successfully created a new relationship");
       });
     }
+
+    $scope.unfollowUser = function(item){
+      $http.get('/users/'+item.user_id+'/unfollow.json').success(function(data){
+        console.log('post to unfollow user successful')
+        index = $scope.followedPosts.indexOf(item);
+        //remove that relationships items from feed
+        $scope.followedPosts.splice(index, 1);
+      });
+    }
     
     $scope.loadMap = function(){ 
       $('#myfeed').addClass('hide');
