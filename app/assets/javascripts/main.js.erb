@@ -99,6 +99,31 @@
         $scope.followedPosts.splice(index, 1);
       });
     }
+
+    $scope.buildSound = function(sound){ 
+      $scope.stopSound();
+      console.log('building a sound now');
+      console.log(sound);
+      soundManager.createSound({
+        id: sound.url,
+        url: sound.url,
+        autoLoad: true,
+        autoPlay: false
+      });
+      $scope.playSound(sound);
+    }
+
+    $scope.playSound = function(sound) {
+      soundManager.play(sound.url);
+      $scope.playingSound = true;
+    }
+
+    $scope.stopSound = function(sound){
+      soundManager.stopAll();
+      $scope.playingSound = false;
+      // console.log(sound.url);
+      // soundManager.stop(sound.url);
+    }
     
     $scope.loadMap = function(){ 
       $('#myfeed').addClass('hide');

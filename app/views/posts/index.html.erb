@@ -21,7 +21,11 @@
     </div>
     <div class="waveform"></div>
     <input ng-show="editItem === item" type="text" ng-model="item.location" placeholder="Location">
-    <p ng-hide="editItem === item"><audio src="{{ item.sound.sound.url }}" controls></audio></p>
+    <p ng-hide="editItem === item">
+      <!-- <audio src="{{ item.sound.sound.url }}" controls></audio> -->
+      <h5 ng-click="buildSound(item.sound.sound)" ng-hide="playingSound">Play sound</h5>
+      <h5 ng-click="stopSound(item.sound.sound)" ng-show="playingSound">Stop sound</h5>
+    </p>
     <h3 class="title" ng-hide="editItem === item" ng-click="togglePost($event)">{{ item.title }}</h3>
     <input ng-show="editItem === item" type="text" ng-model="item.title" placeholder="Title">
     <div ng-hide="editItem === item" class="postContent">{{ item.content }}</div>
