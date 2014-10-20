@@ -78,11 +78,10 @@
             scrollParent: true
         });
 
+        $scope.myWaves[value.user_id + value.sound.sound.url].load(value.sound.sound.url);        
 
       });
 
-      console.log('myWaves looks like')
-      console.log($scope.myWaves)
 
     }
 
@@ -165,24 +164,15 @@
     $scope.playSound = function(item){ 
       console.log('play function')
       $scope.playingSound = true;
-      //  $scope.soundwave = Object.create(WaveSurfer);
-       // $scope.soundwave.init({
-       //     container: document.querySelector('.waveform_'+item.id),
-       //     waveColor: 'rgba(126,130,122,1)',
-       //     progressColor: 'rgba(47,52,59,1)',
-       //     hideScrollbar: true,
-       //     interact: false,
-       //     normalize: true,
-       //     scrollParent: true
-       // });
+      $scope.myWaves[item.user_id + item.sound.sound.url].play();
 
-      $scope.myWaves[item.user_id + item.sound.sound.url].load(item.sound.sound.url);        
+      // $scope.myWaves[item.user_id + item.sound.sound.url].load(item.sound.sound.url);        
 
-      $scope.myWaves[item.user_id + item.sound.sound.url].on('ready', function () {
-          $scope.myWaves[item.user_id + item.sound.sound.url].play();
-          console.log("Sound playing");
+      // $scope.myWaves[item.user_id + item.sound.sound.url].on('ready', function () {
+      //     $scope.myWaves[item.user_id + item.sound.sound.url].play();
+      //     console.log("Sound playing");
           
-      });
+      // });
 
       $scope.myWaves[item.user_id + item.sound.sound.url].on('finish', function(){
         console.log("Sound finished");
