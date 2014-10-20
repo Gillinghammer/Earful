@@ -16,6 +16,8 @@ Earful::Application.routes.draw do
 
   resources :posts, only: [:index, :new, :create ]
 
+  resources :relationships, only: [:create, :destroy]
+
   mount_griddler
 
   # The priority is based upon order of creation:

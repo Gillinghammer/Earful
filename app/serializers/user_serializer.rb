@@ -1,3 +1,3 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :email, :user_name
+  attributes :id, :email, :user_name
 end

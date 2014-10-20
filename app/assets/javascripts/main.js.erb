@@ -54,6 +54,7 @@
       $('#myfeed').addClass('hide');
       $('#mapOfSounds').addClass('hide');
       $('#feedList').removeClass('hide');
+      $('#userSearch').addClass('hide')
       $('#feed').addClass('selected')
       $('#mySounds').removeClass('selected')
 
@@ -79,11 +80,22 @@
         console.log($scope.users)
       });
     }
+
+    $scope.followUser = function(user){
+     console.log(user.id);
+      $http.post('/relationships.json', { relationship:{
+        follower_id: $scope.userId,
+        followed_id: user.id
+      }}).success(function(data){
+        console.log("successfully created a new relationship");
+      });
+    }
     
     $scope.loadMap = function(){ 
       $('#myfeed').addClass('hide');
       $('#mapLink').addClass('selected');
       $('#mapOfSounds').removeClass('hide');
+      $('#userSearch').addClass('hide')
 
       $scope.audioIcon = "/audioIcon.png"
 
