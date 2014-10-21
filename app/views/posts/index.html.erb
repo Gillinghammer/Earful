@@ -84,7 +84,7 @@
 <!-- Global Feed -->
 <div id="globalFeed">
   <div class="searchPosts">
-    <input type="text" name="search" placeholder="Search by Tags" id="search" ng-model="searchContent">
+    <input type="text" name="search" placeholder="Search for Sounds" class="search" ng-model="searchContent">
   </div>
   <div class="followedItem animated fadeInUp" ng-repeat="item in allPosts | filter:searchContent" on-last-repeat>
     <div class="titleBar">
@@ -107,28 +107,24 @@
       <div class="title">{{item.title}}</div>
       <div class="content">{{item.content}}</div>
     </div>
+  </div>
 </div>
 
 <!-- Find Users -->
 <div id="findUsers">
-  <!-- <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts | filter:searchContent">
+  <input type="text" name="search" placeholder="Search for Users" class="search" ng-model="searchUsers">
+  <div class="users animated fadeInUp" ng-repeat="user in users | filter:searchUsers">
 
-    <div class="titleBar">
-      <div class="user">
-        {{item.user_name}}<a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
+    <div class="userRecord">
+      <div class="avatar">
+        <img src="/" width="100px" height="100px"/>
       </div>
-      <div class="date">
-        {{ item.created_at | date:'MMM dd, y' }}
+      <div class="userInfo">
+        <div class="name">{{ user.user_name }}</div>
+        <a href="#" ng-click="followUser(user)" ng-hide="userId == user.id">follow</a>
       </div>
     </div>
-    <div class="waveform"></div>
-    <div class="postTitle">
-      {{item.title}}
-    </div>
-    <div class="postContent">
-      {{item.content}}
-    </div>
-  </div> -->
+  </div>
 </div>
 
 <!-- Map View -->

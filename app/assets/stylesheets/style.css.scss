@@ -43,7 +43,7 @@ input {
         }
       }
     }
-    input#search {
+    input.search {
       width: 100%;
       padding: 20px;
       outline: none;
@@ -121,7 +121,7 @@ input {
         }
       }
     }
-    .followedItem, .globalFeed {
+    .followedItem {
       width: 100%;
       height: 100%;
       .titleBar {
@@ -154,6 +154,35 @@ input {
         .content {
           font-weight: 300;
         }
+      }
+    }
+    #findUsers {
+      padding-top: 10px;
+      .userRecord {
+        width: 100%;
+        padding: 10px 20px;
+        .avatar {
+          width: 100px;
+          height: 100px;
+          float: left;
+        }
+        .userInfo {
+          float: left;
+          padding-left: 20px;
+          line-height: 1.75em;
+          .name {
+            display: block;
+          }
+          a {
+            text-decoration: none;
+            color: $primary-color;
+          }
+        }
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
       }
     }
   }  
