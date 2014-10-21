@@ -20,7 +20,7 @@
 
   <div class="soundItem animated fadeInUp" ng-repeat="item in mySounds track by $index | orderBy : created_at " on-last-repeat>
 
-    <div id="mySoundsPage" class="mediaSection">
+    <div class="mediaSection">
       <div class="playButton" >
         <i ng-hide="playingSound" ng-click="playSound(item)" class="fa fa-play-circle-o"></i>
         <i ng-show="playingSound" ng-click="stopSound(item)" class="fa fa-stop"></i>
@@ -66,17 +66,18 @@
         {{ item.created_at | date:'MMM dd, y' }}
       </div>
     </div>
-    <div id="myFeedsPage">
+    <div class="mediaSection">
+      <div class="playButton" >
+        <i ng-hide="playingSound" ng-click="playSound(item)" class="fa fa-play-circle-o"></i>
+        <i ng-show="playingSound" ng-click="stopSound(item)" class="fa fa-stop"></i>
+      </div>
       <div class="wave waveform_{{item.id}}">
       </div>
     </div>
-    <div class="postTitle">
-      {{item.title}}
+    <div class="postText">
+      <div class="title">{{item.title}}</div>
+      <div class="content">{{item.content}}</div>
     </div>
-    <div class="postContent">
-      {{item.content}}
-    </div>
-  </div>
 </div>
 
 
