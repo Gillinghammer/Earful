@@ -56,6 +56,27 @@
 
 <!-- My Following Feed -->
 <div id="myFeed">
+  <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts | filter:searchContent" on-last-repeat>
+
+    <div class="titleBar">
+      <div class="user">
+        {{item.user_name}}<a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
+      </div>
+      <div class="date">
+        {{ item.created_at | date:'MMM dd, y' }}
+      </div>
+    </div>
+    <div id="myFeedsPage">
+      <div class="wave waveform_{{item.id}}">
+      </div>
+    </div>
+    <div class="postTitle">
+      {{item.title}}
+    </div>
+    <div class="postContent">
+      {{item.content}}
+    </div>
+  </div>
 </div>
 
 
@@ -65,6 +86,24 @@
 
 <!-- Find Users -->
 <div id="findUsers">
+  <!-- <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts | filter:searchContent">
+
+    <div class="titleBar">
+      <div class="user">
+        {{item.user_name}}<a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
+      </div>
+      <div class="date">
+        {{ item.created_at | date:'MMM dd, y' }}
+      </div>
+    </div>
+    <div class="waveform"></div>
+    <div class="postTitle">
+      {{item.title}}
+    </div>
+    <div class="postContent">
+      {{item.content}}
+    </div>
+  </div> -->
 </div>
 
 <!-- Map View -->

@@ -31,12 +31,16 @@
     $scope.mySounds = [];
     $scope.myWaves = {};
 
-    // I REALLY NEED TO MOVE THIS INTO MY LOADMYFEED FUNCTION
-
+    
     $scope.$on('onRepeatLast', function(scope, element, attrs){
-             $scope.createWave($scope.mySounds);
-             $('#mapOfSounds').addClass('hide');
-             $('#navMySounds').addClass('selected');
+              var element_id = "#" + element.parent().attr("id");
+              if (element_id === "#mySounds") {
+                console.log('on the mySounds page')
+             $scope.createWave($scope.mySounds, element_id);
+           } else {
+            console.log('on the myFeeds page')
+             $scope.createWave($scope.followedPosts, element_id);
+             }
           });
     // Get request to retreive mySounds
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
@@ -70,7 +74,7 @@
       // highlight Nav element
       $('#navMySounds').addClass('selected');
       // generate waveforms and draw on page
-      $scope.createWave($scope.mySounds);
+      //$scope.createWave($scope.mySounds);
     };
 
     // this controls the MyFeed page
@@ -98,6 +102,8 @@
       $http.get('/users/'+ $scope.userId +'/followed.json').success(function(data){
         $scope.followedPosts = data.feeds;
       });
+
+      //$scope.createWave($scope.followedPosts);
     }
 
     // this controls the MyFeed page
@@ -153,13 +159,13 @@
       });
     }
 
-    $scope.createWave = function(mySounds){
+    $scope.createWave = function(mySounds, element){
 
-      $.each($scope.mySounds, function(index, value){
+      $.each(mySounds, function(index, value){
         $scope.myWaves[value.user_id + value.sound.sound.url] = Object.create(WaveSurfer);
-
+        console.log(element);
         $scope.myWaves[value.user_id + value.sound.sound.url].init({
-            container: document.querySelector('#mySoundsPage .waveform_'+value.id),
+            container: document.querySelector(element + ' .waveform_'+value.id),
             waveColor: '#3AA1BF',
             progressColor: '#F2385A',
             hideScrollbar: true,

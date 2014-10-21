@@ -116,5 +116,28 @@ input {
         }
       }
     }
+    .followedItem {
+      width: 100%;
+      height: 100%;
+      .titleBar {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        background-color: $text-color;
+        border-bottom: 5px solid $secondary-color;
+        color: $background-color;
+        .user {
+          float: left;
+          a {
+            padding-left: 15px;
+            color: $primary-color;
+            text-decoration: none;
+          }
+        }
+        .date {
+          float: right;
+        }
+      }
+    }
   }  
 }
