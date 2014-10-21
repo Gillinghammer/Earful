@@ -28,7 +28,28 @@
       <div class="wave waveform_{{item.id}}">
       </div>
     </div>
+    <div class="post">
+      <div class="dateBox">
+        <div class="day">
+          {{ item.created_at | date:'dd' }}
+        </div>
+        <div class="monthyear">
+          {{ item.created_at | date:'MMM, y' }}
+        </div>
+        <div class="location">
+          <i class="fa fa-map-marker"></i>{{item.location}}
 
+        </div>
+      </div>
+      <div class="postText">
+        <div class="postTitle">
+          {{item.title}}
+        </div>
+        <div class="postContent">
+          {{item.content}}
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
