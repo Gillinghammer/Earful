@@ -43,6 +43,12 @@ input {
         }
       }
     }
+    input#search {
+      width: 100%;
+      padding: 20px;
+      outline: none;
+      border: none;
+    }
     .mediaSection {
       padding-top: 10px;
       width: 100%;
@@ -108,7 +114,6 @@ input {
           line-height: 1.5em;
           .postTitle {
             font-weight: bold;
-
           }
           .postContent {
             font-weight: 300;
@@ -116,7 +121,7 @@ input {
         }
       }
     }
-    .followedItem {
+    .followedItem, .globalFeed {
       width: 100%;
       height: 100%;
       .titleBar {
@@ -136,6 +141,18 @@ input {
         }
         .date {
           float: right;
+        }
+      }
+      .feedText {
+        text-align: center;
+        padding: 20px;
+        line-height: 1.75em;
+        .title {
+          font-weight: bold;
+          
+        }
+        .content {
+          font-weight: 300;
         }
       }
     }

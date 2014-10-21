@@ -31,15 +31,15 @@
     $scope.mySounds = [];
     $scope.myWaves = {};
 
-    
+    $('#navMySounds').addClass('selected');
     $scope.$on('onRepeatLast', function(scope, element, attrs){
               var element_id = "#" + element.parent().attr("id");
               if (element_id === "#mySounds") {
-                console.log('on the mySounds page')
              $scope.createWave($scope.mySounds, element_id);
-           } else {
-            console.log('on the myFeeds page')
+           } else if (element_id === "#myFeed") {
              $scope.createWave($scope.followedPosts, element_id);
+             } else if (element_id === "#globalFeed") {
+             $scope.createWave($scope.allPosts, element_id);
              }
           });
     // Get request to retreive mySounds
@@ -124,12 +124,11 @@
       $('#navFindUsers').removeClass('selected')
       // highlight Nav element
       $('#navGlobalFeed').addClass('selected')
-
-      // TODO: create action to retreive all sounds
-      // $scope.allPosts = [];
-      // $http.get('/users/'+ $scope.userId +'/followed.json').success(function(data){
-      //   $scope.followedPosts = data.feeds;
-      // });
+      
+      $scope.allPosts = [];
+      $http.get('/posts.json').success(function(data){
+        $scope.allPosts = data.posts;
+      });
     }
 
     // this controls the findUsers page

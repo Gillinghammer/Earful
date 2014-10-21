@@ -56,7 +56,7 @@
 
 <!-- My Following Feed -->
 <div id="myFeed">
-  <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts | filter:searchContent" on-last-repeat>
+  <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts" on-last-repeat>
 
     <div class="titleBar">
       <div class="user">
@@ -74,15 +74,39 @@
       <div class="wave waveform_{{item.id}}">
       </div>
     </div>
-    <div class="postText">
+    <div class="feedText">
       <div class="title">{{item.title}}</div>
       <div class="content">{{item.content}}</div>
     </div>
+  </div>
 </div>
-
 
 <!-- Global Feed -->
 <div id="globalFeed">
+  <div class="searchPosts">
+    <input type="text" name="search" placeholder="Search by Tags" id="search" ng-model="searchContent">
+  </div>
+  <div class="followedItem animated fadeInUp" ng-repeat="item in allPosts | filter:searchContent" on-last-repeat>
+    <div class="titleBar">
+      <div class="user">
+        {{item.user_name}}<a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
+      </div>
+      <div class="date">
+        {{ item.created_at | date:'MMM dd, y' }}
+      </div>
+    </div>
+    <div class="mediaSection">
+      <div class="playButton" >
+        <i ng-hide="playingSound" ng-click="playSound(item)" class="fa fa-play-circle-o"></i>
+        <i ng-show="playingSound" ng-click="stopSound(item)" class="fa fa-stop"></i>
+      </div>
+      <div class="wave waveform_{{item.id}}">
+      </div>
+    </div>
+    <div class="feedText">
+      <div class="title">{{item.title}}</div>
+      <div class="content">{{item.content}}</div>
+    </div>
 </div>
 
 <!-- Find Users -->
