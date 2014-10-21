@@ -1,6 +1,16 @@
 <!-- top nav -->
 <nav>
+  <i class="fa fa-caret-down" ng-show="menuOpen"></i>
+  <i class="fa fa-caret-right" ng-hide="menuOpen"></i>
+
   <ul>
+    <li ng-repeat="element in menuItems | filter:menuItem" id="{{ element.id }}" ng-click="random(element)" >
+      {{ element.text }}
+    </li>
+  </ul>
+
+
+  <!-- <ul>
     <li id="navMySounds" ng-click="loadMySounds()">
       My Sounds
     </li>
@@ -13,12 +23,13 @@
     <li id="navFindUsers" ng-click="findUsers()">
       Find Users
     </li>
-  </ul>
+  </ul> -->
+
 </nav>
 <!-- My Personal Feed -->
 <div id="mySounds">
 
-  <div class="soundItem animated fadeInUp" ng-repeat="item in mySounds track by $index | orderBy : created_at " on-last-repeat>
+  <div class="soundItem animated fadeInUp" ng-repeat="item in mySounds track by $index | orderBy : created_at " on-last-repeat="buildWave">
 
     <div class="mediaSection">
       <div class="playButton" >
@@ -56,7 +67,7 @@
 
 <!-- My Following Feed -->
 <div id="myFeed">
-  <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts" on-last-repeat>
+  <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts" on-last-repeat="buildWave">
 
     <div class="titleBar">
       <div class="user">
@@ -86,7 +97,7 @@
   <div class="searchPosts">
     <input type="text" name="search" placeholder="Search for Sounds" class="search" ng-model="searchContent">
   </div>
-  <div class="followedItem animated fadeInUp" ng-repeat="item in allPosts | filter:searchContent" on-last-repeat>
+  <div class="followedItem animated fadeInUp" ng-repeat="item in allPosts | filter:searchContent" on-last-repeat="buildWave">
     <div class="titleBar">
       <div class="user">
         {{item.user_name}}<a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
@@ -116,9 +127,7 @@
   <div class="users animated fadeInUp" ng-repeat="user in users | filter:searchUsers">
 
     <div class="userRecord">
-      <div class="avatar">
-        <img src="/" width="100px" height="100px"/>
-      </div>
+      <img src="{{user.image}}" class="avatar"/>
       <div class="userInfo">
         <div class="name">{{ user.user_name }}</div>
         <a href="#" ng-click="followUser(user)" ng-hide="userId == user.id">follow</a>

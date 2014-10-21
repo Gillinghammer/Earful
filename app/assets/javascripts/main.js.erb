@@ -14,6 +14,72 @@
 
 
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
+    $scope.menuItem = "My Sounds"
+
+    // nav menu open or closed value
+
+    $scope.menuItems = [
+        {
+          id: 'navMySounds',
+          callMethod: 'loadMySounds()',
+          text: 'My Sounds'
+        },
+        {
+          id: 'navMyFeed',
+          callMethod: 'loadMyFeed()',
+          text: 'My Feed'
+        },
+        {
+          id: 'navGlobalFeed',
+          callMethod: 'loadGlobalFeed()',
+          text: 'All Sounds'
+        },
+        {
+          id: 'navFindUsers',
+          callMethod: 'findUsers()',
+          text: 'Find Users'
+        }
+    ]
+
+    $scope.random = function(element){
+
+      if ($scope.menuOpen) {
+        console.log("inside if", $scope.menuOpen);
+          switch(element.callMethod) {
+          case 'loadMySounds()':
+            $scope.loadMySounds()
+            $scope.orderMenu(element);
+            break;
+          case 'loadMyFeed()':
+            $scope.loadMyFeed()
+            $scope.orderMenu(element);
+            break;
+          case 'loadGlobalFeed()':
+            $scope.loadGlobalFeed()
+            $scope.orderMenu(element);
+            break;
+          case 'findUsers()':
+            $scope.findUsers()
+            $scope.orderMenu(element);
+            break;
+        }
+        $scope.menuItem = element.text;
+        $scope.menuOpen = false;
+      } else {
+        console.log("inside else", $scope.menuOpen);
+        console.log("menuItem before", $scope.menuItem);
+        $scope.menuItem = undefined;
+        $scope.menuOpen = true;
+      }
+    }
+
+    $scope.orderMenu = function(element){
+      var index = $scope.menuItems.indexOf(element)
+      $scope.menuItems.splice(index, 1);
+      $scope.menuItems.unshift(element);
+      console.log($scope.menuItems);
+    }
+
     // variable used to toggle edit inputs
     $scope.editItem = false;
     // starting and ending points used to determine user id from URL
@@ -33,24 +99,39 @@
 
     $('#navMySounds').addClass('selected');
     $scope.$on('onRepeatLast', function(scope, element, attrs){
-              var element_id = "#" + element.parent().attr("id");
-              if (element_id === "#mySounds") {
-             $scope.createWave($scope.mySounds, element_id);
-           } else if (element_id === "#myFeed") {
-             $scope.createWave($scope.followedPosts, element_id);
-             } else if (element_id === "#globalFeed") {
-             $scope.createWave($scope.allPosts, element_id);
-             }
+
+
+        switch(attrs.onLastRepeat) {
+            case "buildNav":
+                buildNav()
+                break;
+            case "buildWave":
+                buildWave(element)
+                break;
+        }
+
+
           });
-    // Get request to retreive mySounds
-    $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
-      $scope.mySounds = data.posts
-      console.log($scope.mySounds);
-      $('#mySounds').addClass('selected')
-    });
+
+    
+
+    function buildWave(element) {
+
+         var element_id = "#" + element.parent().attr("id");
+         if (element_id === "#mySounds") {
+        $scope.createWave($scope.mySounds, element_id);
+      } else if (element_id === "#myFeed") {
+        $scope.createWave($scope.followedPosts, element_id);
+        } else if (element_id === "#globalFeed") {
+        $scope.createWave($scope.allPosts, element_id);
+        }
+
+    }
+    
 
     // this controls the MySounds page
     $scope.loadMySounds = function(){
+
       // Get request to retreive mySounds
       $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
         $scope.mySounds = data.posts
@@ -76,6 +157,8 @@
       // generate waveforms and draw on page
       //$scope.createWave($scope.mySounds);
     };
+
+    $scope.loadMySounds();
 
     // this controls the MyFeed page
     $scope.loadMyFeed = function(){
@@ -174,9 +257,7 @@
         });
 
         $scope.myWaves[value.user_id + value.sound.sound.url].load(value.sound.sound.url);        
-
       });
-
 
     }
 
@@ -193,10 +274,10 @@
       });
     }
 
-    $scope.togglePost = function(event){
-      // locate the class postConent within the post item and toggle it shown or hidden
-      $(event.target).parent('.post').find('.postContent').slideToggle(500, function(){});
-    }
+    // $scope.togglePost = function(event){
+    //   // locate the class postConent within the post item and toggle it shown or hidden
+    //   $(event.target).parent('.post').find('.postContent').slideToggle(500, function(){});
+    // }
 
     $scope.followUser = function(user){
      console.log(user.id);
@@ -236,48 +317,48 @@
     }
 
     
-    $scope.loadMap = function(){ 
-      $('#myfeed').addClass('hide');
-      $('#mapLink').addClass('selected');
-      $('#mapOfSounds').removeClass('hide');
-      $('#userSearch').addClass('hide')
+    // $scope.loadMap = function(){ 
+    //   $('#myfeed').addClass('hide');
+    //   $('#mapLink').addClass('selected');
+    //   $('#mapOfSounds').removeClass('hide');
+    //   $('#userSearch').addClass('hide')
 
-      $scope.audioIcon = "/audioIcon.png"
+    //   $scope.audioIcon = "/audioIcon.png"
 
-      $scope.mapStyle = [{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]}]
+    //   $scope.mapStyle = [{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]}]
 
-      var geocoder = new google.maps.Geocoder();
-      $.each( $scope.mySounds, function( index, value ){
-           geocoder.geocode({
-              'address': value.location
-           }, 
-           function(results, status) {
-              if(status == google.maps.GeocoderStatus.OK) {
-                 new google.maps.Marker({
-                    position: results[0].geometry.location,
-                    icon: $scope.audioIcon,
-                    title: value.location,
-                    map: $scope.map
-                 });
-                 $scope.map.setCenter(results[0].geometry.location);
-                 $scope.map.setOptions({styles: $scope.mapStyle});
-              }
-           });
+    //   var geocoder = new google.maps.Geocoder();
+    //   $.each( $scope.mySounds, function( index, value ){
+    //        geocoder.geocode({
+    //           'address': value.location
+    //        }, 
+    //        function(results, status) {
+    //           if(status == google.maps.GeocoderStatus.OK) {
+    //              new google.maps.Marker({
+    //                 position: results[0].geometry.location,
+    //                 icon: $scope.audioIcon,
+    //                 title: value.location,
+    //                 map: $scope.map
+    //              });
+    //              $scope.map.setCenter(results[0].geometry.location);
+    //              $scope.map.setOptions({styles: $scope.mapStyle});
+    //           }
+    //        });
           
-      });
+    //   });
 
-      $scope.$on('mapInitialized', function(event, map) {
-        $scope.map.setCenter({
-          center: {
-            latitude: 45,
-            longitude: -73
-          },
-          zoom: 8
+    //   $scope.$on('mapInitialized', function(event, map) {
+    //     $scope.map.setCenter({
+    //       center: {
+    //         latitude: 45,
+    //         longitude: -73
+    //       },
+    //       zoom: 8
 
-        });
-      });
+    //     });
+    //   });
       
-    }
+    // }
 
 
   }]);
