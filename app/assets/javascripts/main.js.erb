@@ -36,7 +36,7 @@
     $scope.$on('onRepeatLast', function(scope, element, attrs){
              $scope.createWave($scope.mySounds);
              $('#mapOfSounds').addClass('hide');
-
+             $('#navMySounds').addClass('selected');
           });
     // Get request to retreive mySounds
     $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
@@ -45,23 +45,113 @@
       $('#mySounds').addClass('selected')
     });
 
-    $scope.loadMyFeed = function(){
-      // I REALLY NEED TO MOVE THIS INTO MY LOADMYFEED FUNCTION
+    // this controls the MySounds page
+    $scope.loadMySounds = function(){
       // Get request to retreive mySounds
       $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
         $scope.mySounds = data.posts
         console.log($scope.mySounds);
-        $('#mySounds').addClass('selected')
+        
       });
-
-      $('#myfeed').removeClass('hide');
-      $('#feedList').addClass('hide');
-      $('#mapOfSounds').addClass('hide');
-      $('#feed').removeClass('selected')
-      $('#mySounds').addClass('selected')
+      // unhide mySounds
+      $('#mySounds').removeClass('hide');
+      // hide myFeed
+      $('#myFeed').addClass('hide');
+      // hide map
+      $('#map').addClass('hide');
+      // hide GlobalFeed
+      $('#globalFeed').addClass('hide');
+      // hide findUsers
+      $('#findUsers').addClass('hide');
+      // remove nav highlighting
+      $('#navMyFeed').removeClass('selected')
+      $('#navGlobalFeed').removeClass('selected')
+      $('#navFindUsers').removeClass('selected')
+      // highlight Nav element
+      $('#navMySounds').addClass('selected');
+      // generate waveforms and draw on page
       $scope.createWave($scope.mySounds);
-
     };
+
+    // this controls the MyFeed page
+    $scope.loadMyFeed = function(){
+      // unhide myFeed page
+      $('#myFeed').removeClass('hide');
+      // hide mySounds
+      $('#mySounds').addClass('hide');
+      // hide map
+      $('#map').addClass('hide');
+      // hide GlobalFeed
+      $('#globalFeed').addClass('hide');
+      // hide findUsers
+      $('#findUsers').addClass('hide');
+      // remove nav highlighting
+      $('#navMySounds').removeClass('selected')
+      $('#navGlobalFeed').removeClass('selected')
+      $('#navFindUsers').removeClass('selected')
+      // highlight Nav element
+      $('#navMyFeed').addClass('selected');
+
+      // variables for Feed page
+      $scope.followedPosts = [];
+      //Get request to retreive publicPosts
+      $http.get('/users/'+ $scope.userId +'/followed.json').success(function(data){
+        $scope.followedPosts = data.feeds;
+      });
+    }
+
+    // this controls the MyFeed page
+    $scope.loadGlobalFeed = function(){
+      // unhide GlobalFeed page
+      $('#globalFeed').removeClass('hide');
+      // hide mySounds
+      $('#mySounds').addClass('hide');
+      // hide map
+      $('#map').addClass('hide');
+      // hide myFeed
+      $('#myFeed').addClass('hide');
+      // hide findUsers
+      $('#findUsers').addClass('hide');
+      // remove nav highlighting
+      $('#navMySounds').removeClass('selected')
+      $('#navMyFeed').removeClass('selected');
+      $('#navFindUsers').removeClass('selected')
+      // highlight Nav element
+      $('#navGlobalFeed').addClass('selected')
+
+      // TODO: create action to retreive all sounds
+      // $scope.allPosts = [];
+      // $http.get('/users/'+ $scope.userId +'/followed.json').success(function(data){
+      //   $scope.followedPosts = data.feeds;
+      // });
+    }
+
+    // this controls the findUsers page
+    $scope.findUsers  = function(){
+      // unhide findUsers page
+      $('#findUsers').removeClass('hide');
+      // hide mySounds
+      $('#mySounds').addClass('hide');
+      // hide map
+      $('#map').addClass('hide');
+      // hide GlobalFeed
+      $('#globalFeed').addClass('hide');
+      // hide myFeed
+      $('#myFeed').addClass('hide');
+      // remove nav highlighting
+      $('#navMySounds').removeClass('selected')
+      $('#navMyFeed').removeClass('selected');
+      $('#navGlobalFeed').removeClass('selected')
+      // highlight Nav element
+      $('#navFindUsers').addClass('selected')
+
+      $scope.users = [];
+
+      $http.get('/fetch_users.json').success(function(data){
+        $scope.users = data.feeds;
+        console.log($scope.users)
+      });
+    }
 
     $scope.createWave = function(mySounds){
 
@@ -101,38 +191,6 @@
     $scope.togglePost = function(event){
       // locate the class postConent within the post item and toggle it shown or hidden
       $(event.target).parent('.post').find('.postContent').slideToggle(500, function(){});
-    }
-
-    // functions for the Feed page
-    $scope.loadFeed = function(){
-      $('#myfeed').addClass('hide');
-      $('#mapOfSounds').addClass('hide');
-      $('#feedList').removeClass('hide');
-      $('#userSearch').addClass('hide')
-      $('#feed').addClass('selected')
-      $('#mySounds').removeClass('selected')
-
-      // variables for Feed page
-      $scope.followedPosts = [];
-      //Get request to retreive publicPosts
-      $http.get('/users/'+ $scope.userId +'/followed.json').success(function(data){
-        $scope.followedPosts = data.feeds;
-      });
-    }
-
-    $scope.searchUsers  = function(){
-
-      $('#myfeed').addClass('hide');
-      $('#mapOfSounds').addClass('hide');
-      $('#feedList').addClass('hide');
-      $('#userSearch').removeClass('hide')
-
-      $scope.users = [];
-
-      $http.get('/fetch_users.json').success(function(data){
-        $scope.users = data.feeds;
-        console.log($scope.users)
-      });
     }
 
     $scope.followUser = function(user){

@@ -7,6 +7,7 @@ $background-color: #E9F1DF;
 
 *{
   box-sizing: border-box;
+  font-family: $font-stack;
 }
 html, body {
   height: 100%;
@@ -22,211 +23,25 @@ input {
 }
 
 @media only screen and (max-width: 479px) {
-  
   body {
-    font-family: $font-stack;
-    background-color: $background-color;
-      #topnav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: $secondary-color;
-        z-index: 2;
-        #view {
-          padding: 15px;
+    width: 100%;
+    nav {
+      ul {
+        margin: 0 auto;
+        padding: 0;
+        background-color: $primary-color;
+        li {
+          color: $text-color;
+          list-style: none;
           text-align: center;
-          span {
-            color: $text-color;
-            padding: 0 10px;
-            text-decoration: underline;
-            cursor: pointer;
-          }
-        }
-      }
-      #userSearch {
-        top: 0;
-        margin: 70px 0 100px 0;
-      }
-      #mapOfSounds {
-        min-height: 100%;
-        height: 100%;
-        margin: -50px 0;
-        overflow: hidden;
-        map {
-          height: 100%;
-          min-height: 100%;
-        }
-      }
-      #myfeed {
-        top: 0;
-        margin: 70px 0 100px 0;
-        .post {
-          min-height: 350px;
-          text-align: center;
-          div.datebox {
-            float: left;
-            div.postDate {
-              background-color: $primary-color;
-              color: white;
-              border: 5px solid $secondary-color;
-              margin: 0 10px;
-              font-weight: 100;
-              height: 100px;
-              width: 100px;
-              div.day {
-                font-size: 2em;
-                padding-top: 10px;
-                margin: 0;
-              }
-              div.monthyear {
-                padding: 10px 0;
-                margin: 0;
-              }
-            }
-            div.location {
-              margin: 0 auto;
-              color: $text-color;
-              max-width: 100px;
-            }
-          }
-
-          div.waveform {
-            // background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
-            // background-size: contain;
-            height: 100px;
-            max-width: 80%;
-            padding: 10px 20px;
-          }
-        
-          .title {
-            display: block;
-            color: $primary-color;
-            margin:0;
-            padding:0;
-            text-decoration: underline;
-            cursor: pointer;
-            padding-top: 20px;
-          }
-            .postContent {
-              display: none;
-              padding: 20px;
-              color: $text-color;
-              font-weight: 300;
-              line-height: 1.5em;
-          }
-        }
-      }
-      #feedList {
-        position: relative;
-        top: 100px;
-        margin-bottom: 170px;
-        #searchbar {
-          position: fixed;
-          top: 0;
-          background-color: $background-color;
-          z-index: 10;
-          h3 {
-            color: $secondary-color;
-            font-weight: 700;
-            font-size: 1.75em;
-            padding-bottom: 10px;
-            margin:0;
-          }
-          display: block;
-          text-align: center;
-          width: 100%;
-          input#search {
-            width: 100%;
-            height: 50px;
-            padding-bottom: 10px;
-          }
-        }
-        div#feedItems {
-        .post {
-          padding: 20px 0;
-          text-align: center;
-          .itemInfo {
-            background-color: $primary-color;
-            color: white;
-            padding: 10px;
-            border-bottom: 5px solid $secondary-color;
-            .user {
-              display: inline;
-              float: left;
-            }
-            .createdAt {
-              display: inline;
-              float: right;
-            }
-            .clearfix {
-              visibility: hidden;
-                display: block;
-                font-size: 0;
-                content: " ";
-                clear: both;
-                height: 0;
-            }
-          }
-          .waveform {
-
-            height: 90px;
-            // background-image: url('http://www.acapela-group.com/virtual-speaker/wp-content/uploads/2014/03/Layer_4-01-512.png');
-            // background-size: contain;
-
-          }
-          audio {
-            margin-top: 10px;
-          }
-          .tags {
-            padding: 10px;
-            color: $text-color;
-          }
-          .title {
-            display: block;
-            color: $primary-color;
-            margin:0;
-            padding:0;
-            text-decoration: underline;
-            cursor: pointer;
-            padding-top: 20px;
-          }
-          .postContent {
-            font-weight: 300;
-            padding: 20px;
-            display: none;
-            color: $text-color;
-            line-height: 1.5em;
-          }
-        }
-        }
-      }
-      #navigation {
-        position: fixed;
-        bottom:0;
-        width: 100%;
-        table {
-          width: 100%;
-          td {
-            transition: 0.5s;
-            cursor: pointer;
-            background-color: $primary-color;
-            text-align: center;
-            color: white;
-            padding: 0;
-            margin: 0;
-            width: 150px;
-            height: 50px;
-            &.selected {
-              transition: 0.5s;
-              background-color: $secondary-color;
-              color: $text-color;
-            }
-            &:hover {
-              font-weight: bold;
-              text-decoration: underline;
-            }
+          font-size: 1.75em;
+          padding: 10px 0;
+          border-bottom: 5px solid $special-color;
+          &.selected {
+            background-color: $secondary-color;
           }
         }
       }
     }
-  }
+  }  
+}

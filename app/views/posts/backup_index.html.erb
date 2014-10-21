@@ -1,0 +1,80 @@
+<!-- top nav -->
+<div id="topnav">
+  <div id="view">
+  <span id="listLink" ng-click="loadMyFeed()">List</span><span id="mapLink" ng-click="loadMap()">Map</span><span id="searchUsers" ng-click="searchUsers()">Search for User</span>
+  </div>
+</div>
+<!-- My Feed Section -->
+<div id="myfeed">
+  <div class="post animated fadeInUp" ng-repeat="item in mySounds track by $index | orderBy : created_at " on-last-repeat>
+    <div class="datebox" ng-hide="editItem === item">
+      <!-- <div class="postDate">
+        <div class="day">
+          {{ item.created_at | date:'dd' }}
+        </div>
+        <div class="monthyear">
+          {{ item.created_at | date:'MMM, y' }}
+        </div>
+      </div>
+      <div class="location" ng-hide="editItem === item">{{ item.location }}</div>
+    </div> -->
+    <div id="waveform_{{item.id}}" class="waveform" >
+
+    </div>
+    <input ng-show="editItem === item" type="text" ng-model="item.location" placeholder="Location">
+    <div ng-hide="editItem === item">
+      <!-- <audio src="{{ item.sound.sound.url }}" controls></audio> -->
+      <h5 ng-click="playSound(item)" ng-hide="playingSound">Play sound</h5>
+      <h5 ng-click="stopSound(item)" ng-show="playingSound">Stop sound</h5>
+    </div>
+    <h3 class="title" ng-hide="editItem === item" ng-click="togglePost($event)">{{ item.title }}</h3>
+    <input ng-show="editItem === item" type="text" ng-model="item.title" placeholder="Title">
+    <div ng-hide="editItem === item" class="postContent">{{ item.content }}</div>
+    <textarea ng-show="editItem === item" ng-model="item.content" placeholder="Describe the moment"></textarea><br>
+    <p ng-hide="editItem === item">Public: {{ item.public }}</p>
+    <p ng-show="editItem === item"><input type="checkbox" name="Public?" ng-model="item.public">Public?</p>
+    <button ng-hide="editItem === item" ng-click="selectEditItem(item)">Edit</button>
+    <button ng-show="editItem === item" ng-click="selectUpdateItem(item)">Update</button>
+    <!-- <button ng-show="editItem === item" ng-click="selectDeleteItem(item)">Delete</button> -->
+  </div>
+</div>
+
+<!-- Feed Section -->
+<div id="feedList" class="hide">
+  <div id="searchbar">
+    <h3>EARFULS</h3>
+      <input type="text" name="search" placeholder="Search by Tags" id="search" ng-model="searchContent">
+  </div>
+  <div id="feedItems">
+    <div class="post animated fadeInUp" ng-repeat="item in followedPosts | filter:searchContent">
+
+      <div class="itemInfo">
+        <div class="user">{{ item.user_name }} <a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a></div>
+        <div class="createdAt">{{ item.created_at | date:'MMM dd, y' }}</div>
+        <div class="clearfix"></div>
+      </div>
+      <div id="waveform_{{item.id}}" class="waveform" >
+
+      </div>
+      <h5 ng-click="playSound(item)" ng-hide="playingSound">Play sound</h5>
+      <h5 ng-click="stopSound(item)" ng-show="playingSound">Stop sound</h5>
+      <div class="tags">{{ item.tags }}</div>
+      <div class="title" ng-click="togglePost($event)">{{ item.title }}</div>
+      <div class="postContent">{{ item.content }}</div>
+
+    </div>
+  </div>
+</div>
+<!-- Maps Section -->
+<div id="mapOfSounds">
+  <map zoom="3" center="[40.74, -74.18]" ></map>
+</div>
+<!-- User Search -->
+<div id="userSearch" class="hide">
+  <div id="userList" ng-repeat="user in users">
+    <div class="user">
+      <div class="avatar">{{ user.avatar }}</div>
+      <div class="name"><a href="#">{{ user.user_name }}</a> <a href="#" ng-click="followUser(user)" ng-hide="userId == user.id">follow</a></div>
+    </div>
+  </div>
+</div>
