@@ -19,12 +19,16 @@
 <div id="mySounds">
 
   <div class="soundItem animated fadeInUp" ng-repeat="item in mySounds track by $index | orderBy : created_at " on-last-repeat>
-    <div class="mediaSection">
-      <div class="playButton">
-        Play
+
+    <div id="mySoundsPage" class="mediaSection">
+      <div class="playButton" >
+        <i ng-hide="playingSound" ng-click="playSound(item)" class="fa fa-play-circle-o"></i>
+        <i ng-show="playingSound" ng-click="stopSound(item)" class="fa fa-stop"></i>
       </div>
-      <div id="waveform_{{item.id}}" class="waveform"></div>
+      <div class="wave waveform_{{item.id}}">
+      </div>
     </div>
+
   </div>
 
 </div>

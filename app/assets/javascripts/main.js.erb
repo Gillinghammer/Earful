@@ -159,9 +159,9 @@
         $scope.myWaves[value.user_id + value.sound.sound.url] = Object.create(WaveSurfer);
 
         $scope.myWaves[value.user_id + value.sound.sound.url].init({
-            container: document.querySelector('#waveform_'+value.id),
-            waveColor: 'rgba(126,130,122,1)',
-            progressColor: 'rgba(47,52,59,1)',
+            container: document.querySelector('#mySoundsPage .waveform_'+value.id),
+            waveColor: '#3AA1BF',
+            progressColor: '#F2385A',
             hideScrollbar: true,
             interact: false,
             normalize: true,
@@ -223,14 +223,6 @@
       console.log('play function')
       $scope.playingSound = true;
       $scope.myWaves[item.user_id + item.sound.sound.url].play();
-
-      // $scope.myWaves[item.user_id + item.sound.sound.url].load(item.sound.sound.url);        
-
-      // $scope.myWaves[item.user_id + item.sound.sound.url].on('ready', function () {
-      //     $scope.myWaves[item.user_id + item.sound.sound.url].play();
-      //     console.log("Sound playing");
-          
-      // });
 
       $scope.myWaves[item.user_id + item.sound.sound.url].on('finish', function(){
         console.log("Sound finished");
