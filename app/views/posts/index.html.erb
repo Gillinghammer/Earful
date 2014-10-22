@@ -1,38 +1,4 @@
-<div id="splash">
-  <div id="hero">
-    <h1>Share an Earful!</h1>
-    <h3>Capture the busy sounds of rush hour, a quiet secluded beach or maybe just a thought you'd like to share. Then upload the sound recording with a short memo.</h3>
-  </div>
-  <div id="earfulInstructions" >
-    <div class="screenshot">
-      <%= image_tag "ss1.PNG" %>
-    </div>
-    <div class="explanation group">
-      <p>Open up your favorite recording program and start recording!
-      </p>
-      <p>
-        When you're done attach the recording to a new email.
-      </p>
-    </div>
-    <div class="screenshot">
-      <%= image_tag "ss3.PNG" %>
-    </div>
-    <div class="explanation group">
-      <p>Send your email to:<br><span class="email">inbound@gillinghammer.bymail.in</span>
-      </p>
-      <p>
-        Create a title for your upload and put that in the subject line. Then add a short memo about the sound  you've recorded and send it!
-      </p>
-      <p>
-        <span class="note">Send your email from the same email address that your Facebook account is linked to.</span>
-      </p>
-    </div>
-  </div>
-  <div id="summary">
-    <p>Now just turn your phone back to portait mode and click <span>My Sounds</span>, to listen to your uploaded songs!</p>
-  </div>
-</div>
-
+<%= render '/devise/shared/splash' %>
 <!-- top nav -->
 <div id="signout"><a href="/sign_out"><i class="fa fa-sign-out"></i></a></div>
 <nav>
