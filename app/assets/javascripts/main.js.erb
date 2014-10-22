@@ -15,7 +15,7 @@
 
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
     $scope.menuItem = "My Sounds"
-   
+
     // nav menu open or closed value
 
     $scope.menuItems = [
@@ -125,7 +125,6 @@
 
   }
 
-
     // this controls the MySounds page
     $scope.loadMySounds = function(){
 
@@ -151,8 +150,6 @@
       $('#navFindUsers').removeClass('selected')
       // highlight Nav element
       $('#navMySounds').addClass('selected');
-      // generate waveforms and draw on page
-      //$scope.createWave($scope.mySounds);
     };
 
     $scope.loadMySounds();
