@@ -114,7 +114,7 @@
   <div class="users animated fadeInUp" ng-repeat="user in users | filter:searchUsers">
 
     <div class="userRecord">
-      <img src="{{user.image}}?type=square" class="avatar"/>
+      <img src="{{user.image}}?type=large" class="avatar"/>
       <div class="userInfo">
         <div class="name">{{ user.user_name }}</div>
         <a href="#" ng-click="followUser(user)" ng-hide="userId == user.id">follow</a>
