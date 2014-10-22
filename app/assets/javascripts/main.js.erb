@@ -261,6 +261,17 @@
 
     }
 
+
+    $scope.deleteItem = function(item){
+
+      $http.delete('/users/'+ $scope.userId + '/posts/' + item.id + '.json').success(function(data){
+        var index = $scope.mySounds.indexOf(item);
+        $scope.mySounds.splice(index, 1);
+      });
+
+    }
+
+
     $scope.selectEditItem = function(item){
       $scope.editItem = item;
     }
@@ -269,7 +280,6 @@
       $http.put('/users/'+ $scope.userId + '/posts/' + item.id + '.json', item ).success(function(data){
         $scope.editItem = 0;
         var index = $scope.mySounds.indexOf(item);
-        console.log(data.post);
         $scope.mySounds.splice(index, 1, data.post);
       });
     }

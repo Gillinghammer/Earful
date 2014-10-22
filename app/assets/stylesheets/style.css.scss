@@ -17,9 +17,14 @@ html, body {
 .hide {
   display: none;
 }
-input {
-  display: block;
-  margin: 0 auto;
+
+i.fa-trash-o {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  color: $background-color;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 479px) {
@@ -40,6 +45,12 @@ input {
           &.selected {
             background-color: $secondary-color;
           }
+          // &:hover {
+          //   background-color: darken( $primary-color, 10% );
+          // }
+          // &:active {
+          //   background-color: lighten( $primary-color, 10% );
+          // }
         }
       }
       i.fa-caret-down, i.fa-caret-right {
@@ -87,10 +98,12 @@ input {
       width: 100%;
       height: 100%;
       .post {
+        position: relative;
         background-color: $primary-color;
         width: 100%;
         min-height: 175px;
         .dateBox {
+          position: relative;
           float: left;
           width: 100px;
           padding: 20px 0;
@@ -103,14 +116,46 @@ input {
             font-size: 1em;
           }
           .location {
+            position: relative;
+            padding: 20px 0;
             font-size: 0.75em;
-            padding: 15px 5px 0 5px;
             font-weight: 100;
+            bottom: 10px;
             i {
               &.fa-map-marker {
-                font-size: 1em;
-                padding-right: 5px;
+                display: block;
+                padding-bottom: 5px;
+                font-size: 1.25em;
               }
+            }
+            input{
+              position: absolute;
+              padding: 10px 5px;
+              left: 0;
+              border: none;
+              outline: none;
+              width: 100%;
+              -webkit-appearance: none;
+              -webkit-border-radius:0; 
+              border-radius:0;
+              color: $secondary-color;
+              font-size: 0.8em;
+              font-weight: normal;
+            }
+            button {
+              position: absolute;
+              bottom: -20px;
+              left: 0;
+              padding-: 10px 5px;
+              width: 100%;
+              height: 25px;
+              font-weight: normal;
+              color: $text-color;
+              border: none;
+              background-color: $secondary-color;
+              -webkit-appearance: none;
+              -webkit-border-radius:0; 
+              border-radius:0;
             }
           }
         }
@@ -168,7 +213,7 @@ input {
       .userRecord {
         width: 100%;
         padding: 10px 20px;
-      img.avatar {
+        img.avatar {
           width: 100px;
           height: 100px;
           border-radius: 150px;
@@ -189,10 +234,10 @@ input {
           }
         }
         &:after {
-            content: "";
-            display: table;
-            clear: both;
-          }
+          content: "";
+          display: table;
+          clear: both;
+        }
       }
     }
   }  

@@ -9,22 +9,6 @@
     </li>
   </ul>
 
-
-  <!-- <ul>
-    <li id="navMySounds" ng-click="loadMySounds()">
-      My Sounds
-    </li>
-    <li id="navMyFeed" ng-click="loadMyFeed()">
-      My Feed
-    </li>
-    <li id="navGlobalFeed" ng-click="loadGlobalFeed()">
-      All Sounds
-    </li>
-    <li id="navFindUsers" ng-click="findUsers()">
-      Find Users
-    </li>
-  </ul> -->
-
 </nav>
 <!-- My Personal Feed -->
 <div id="mySounds">
@@ -40,19 +24,22 @@
       </div>
     </div>
     <div class="post">
-      <div class="dateBox">
+      <div class="dateBox" >
         <div class="day">
           {{ item.created_at | date:'dd' }}
         </div>
         <div class="monthyear">
           {{ item.created_at | date:'MMM, y' }}
         </div>
-        <div class="location">
-          <i class="fa fa-map-marker"></i>{{item.location}}
-
+        <div class="location" ng-click="selectEditItem(item)">
+          <div class="itemLocation" ng-hide="editItem === item">
+            <i class="fa fa-map-marker"></i>{{item.location}}
+          </div>
+          <input  type="text" ng-model="item.location" placeholder="Location" ng-show="editItem === item"><br>
+          <button ng-show="editItem === item" ng-click="selectUpdateItem(item)">Save</button>
         </div>
       </div>
-      <div class="postText">
+      <div class="postText" >
         <div class="postTitle">
           {{item.title}}
         </div>
@@ -60,9 +47,9 @@
           {{item.content}}
         </div>
       </div>
+      <i class="fa fa-trash-o" ng-click="deleteItem(item)"></i>
     </div>
   </div>
-
 </div>
 
 <!-- My Following Feed -->
