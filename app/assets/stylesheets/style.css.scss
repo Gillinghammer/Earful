@@ -30,6 +30,18 @@ i.fa-trash-o {
 @media only screen and (max-width: 479px) {
   body {
     width: 100%;
+    div#signout {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.25em;
+      color: $text-color;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        color: $text-color;
+      }
+    }
     nav {
       ul {
         margin: 0 auto;

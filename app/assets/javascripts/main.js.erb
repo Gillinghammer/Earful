@@ -4,64 +4,64 @@
   
   //DIRECTIVE to call my createWave function once my repeat is over
   .directive('onLastRepeat', function() {
-          return function(scope, element, attrs) {
-              if (scope.$last) setTimeout(function(){
-                  scope.$emit('onRepeatLast', element, attrs);
-              }, 1);
-          };
-      })
+    return function(scope, element, attrs) {
+      if (scope.$last) setTimeout(function(){
+        scope.$emit('onRepeatLast', element, attrs);
+      }, 1);
+    };
+  })
 
 
 
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
     $scope.menuItem = "My Sounds"
-
+   
     // nav menu open or closed value
 
     $scope.menuItems = [
-        {
-          id: 'navMySounds',
-          callMethod: 'loadMySounds()',
-          text: 'My Sounds'
-        },
-        {
-          id: 'navMyFeed',
-          callMethod: 'loadMyFeed()',
-          text: 'My Feed'
-        },
-        {
-          id: 'navGlobalFeed',
-          callMethod: 'loadGlobalFeed()',
-          text: 'All Sounds'
-        },
-        {
-          id: 'navFindUsers',
-          callMethod: 'findUsers()',
-          text: 'Find Users'
-        }
+    {
+      id: 'navMySounds',
+      callMethod: 'loadMySounds()',
+      text: 'My Sounds'
+    },
+    {
+      id: 'navMyFeed',
+      callMethod: 'loadMyFeed()',
+      text: 'My Feed'
+    },
+    {
+      id: 'navGlobalFeed',
+      callMethod: 'loadGlobalFeed()',
+      text: 'All Sounds'
+    },
+    {
+      id: 'navFindUsers',
+      callMethod: 'findUsers()',
+      text: 'Find Users'
+    }
     ]
 
     $scope.random = function(element){
 
       if ($scope.menuOpen) {
         console.log("inside if", $scope.menuOpen);
-          switch(element.callMethod) {
+        switch(element.callMethod) {
           case 'loadMySounds()':
-            $scope.loadMySounds()
-            $scope.orderMenu(element);
-            break;
+          $scope.loadMySounds()
+          $scope.orderMenu(element);
+          break;
           case 'loadMyFeed()':
-            $scope.loadMyFeed()
-            $scope.orderMenu(element);
-            break;
+          $scope.loadMyFeed()
+          $scope.orderMenu(element);
+          break;
           case 'loadGlobalFeed()':
-            $scope.loadGlobalFeed()
-            $scope.orderMenu(element);
-            break;
+          $scope.loadGlobalFeed()
+          $scope.orderMenu(element);
+          break;
           case 'findUsers()':
-            $scope.findUsers()
-            $scope.orderMenu(element);
-            break;
+          $scope.findUsers()
+          $scope.orderMenu(element);
+          break;
         }
         $scope.menuItem = element.text;
         $scope.menuOpen = false;
@@ -100,34 +100,31 @@
     $('#navMySounds').addClass('selected');
     $scope.$on('onRepeatLast', function(scope, element, attrs){
 
-
-        switch(attrs.onLastRepeat) {
-            case "buildNav":
-                buildNav()
-                break;
-            case "buildWave":
-                buildWave(element)
-                break;
-        }
-
-
-          });
+      switch(attrs.onLastRepeat) {
+        case "buildNav":
+        buildNav()
+        break;
+        case "buildWave":
+        buildWave(element)
+        break;
+      }
+    });
 
     
 
     function buildWave(element) {
 
-         var element_id = "#" + element.parent().attr("id");
-         if (element_id === "#mySounds") {
-        $scope.createWave($scope.mySounds, element_id);
-      } else if (element_id === "#myFeed") {
-        $scope.createWave($scope.followedPosts, element_id);
-        } else if (element_id === "#globalFeed") {
-        $scope.createWave($scope.allPosts, element_id);
-        }
-
+     var element_id = "#" + element.parent().attr("id");
+     if (element_id === "#mySounds") {
+      $scope.createWave($scope.mySounds, element_id);
+    } else if (element_id === "#myFeed") {
+      $scope.createWave($scope.followedPosts, element_id);
+    } else if (element_id === "#globalFeed") {
+      $scope.createWave($scope.allPosts, element_id);
     }
-    
+
+  }
+
 
     // this controls the MySounds page
     $scope.loadMySounds = function(){
@@ -247,20 +244,19 @@
         $scope.myWaves[value.user_id + value.sound.sound.url] = Object.create(WaveSurfer);
         console.log(element);
         $scope.myWaves[value.user_id + value.sound.sound.url].init({
-            container: document.querySelector(element + ' .waveform_'+value.id),
-            waveColor: '#3AA1BF',
-            progressColor: '#F2385A',
-            hideScrollbar: true,
-            interact: false,
-            normalize: true,
-            scrollParent: true
+          container: document.querySelector(element + ' .waveform_'+value.id),
+          waveColor: '#3AA1BF',
+          progressColor: '#F2385A',
+          hideScrollbar: true,
+          interact: false,
+          normalize: true,
+          scrollParent: true
         });
 
         $scope.myWaves[value.user_id + value.sound.sound.url].load(value.sound.sound.url);        
       });
 
     }
-
 
     $scope.deleteItem = function(item){
 
@@ -270,7 +266,6 @@
       });
 
     }
-
 
     $scope.selectEditItem = function(item){
       $scope.editItem = item;
@@ -284,49 +279,44 @@
       });
     }
 
-    // $scope.togglePost = function(event){
-    //   // locate the class postConent within the post item and toggle it shown or hidden
-    //   $(event.target).parent('.post').find('.postContent').slideToggle(500, function(){});
-    // }
-
     $scope.followUser = function(user){
      console.log(user.id);
-      $http.post('/relationships.json', { relationship:{
-        follower_id: $scope.userId,
-        followed_id: user.id
-      }}).success(function(data){
-        console.log("successfully created a new relationship");
-      });
-    }
+     $http.post('/relationships.json', { relationship:{
+      follower_id: $scope.userId,
+      followed_id: user.id
+    }}).success(function(data){
+      console.log("successfully created a new relationship");
+    });
+  }
 
-    $scope.unfollowUser = function(item){
-      $http.get('/users/'+item.user_id+'/unfollow.json').success(function(data){
-        console.log('post to unfollow user successful')
-        index = $scope.followedPosts.indexOf(item);
+  $scope.unfollowUser = function(item){
+    $http.get('/users/'+item.user_id+'/unfollow.json').success(function(data){
+      console.log('post to unfollow user successful')
+      index = $scope.followedPosts.indexOf(item);
         //remove that relationships items from feed
         $scope.followedPosts.splice(index, 1);
       });
-    }
+  }
 
-    $scope.stopSound = function(item){
-      
-      $scope.myWaves[item.user_id + item.sound.sound.url].stop();
+  $scope.stopSound = function(item){
+
+    $scope.myWaves[item.user_id + item.sound.sound.url].stop();
+    $scope.playingSound = false;
+
+  }
+
+  $scope.playSound = function(item){ 
+    console.log('play function')
+    $scope.playingSound = true;
+    $scope.myWaves[item.user_id + item.sound.sound.url].play();
+
+    $scope.myWaves[item.user_id + item.sound.sound.url].on('finish', function(){
+      console.log("Sound finished");
       $scope.playingSound = false;
+    });
+  }
 
-    }
 
-    $scope.playSound = function(item){ 
-      console.log('play function')
-      $scope.playingSound = true;
-      $scope.myWaves[item.user_id + item.sound.sound.url].play();
-
-      $scope.myWaves[item.user_id + item.sound.sound.url].on('finish', function(){
-        console.log("Sound finished");
-        $scope.playingSound = false;
-      });
-    }
-
-    
     // $scope.loadMap = function(){ 
     //   $('#myfeed').addClass('hide');
     //   $('#mapLink').addClass('selected');
@@ -354,7 +344,7 @@
     //              $scope.map.setOptions({styles: $scope.mapStyle});
     //           }
     //        });
-          
+
     //   });
 
     //   $scope.$on('mapInitialized', function(event, map) {
@@ -367,7 +357,7 @@
 
     //     });
     //   });
-      
+
     // }
 
 
