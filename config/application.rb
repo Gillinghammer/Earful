@@ -55,6 +55,7 @@ module Earful
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    Fog.credentials = { path_style: true }
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
