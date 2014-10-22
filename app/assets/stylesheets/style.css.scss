@@ -14,60 +14,6 @@ html, body {
   min-height: 100%;
 }
 
-#login {
-  background-color: $primary-color;
-  height: 100%;
-
-  #instructions {
-    padding-top: 10px;
-   color: $text-color;
-   text-align: center;
-   font-size: 1.25em;
-  }
-
-  #logo {
-    font-size: 3em;
-    padding-top: 10px;
-    text-align: center;
-    color: $secondary-color;
-  }
-
-  #signin {
-    pointer: cursor;
-    position: absolute;
-    top: 200px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: rgb(59,89,152);
-    width: 90%;
-    border-radius: 10px;
-    height: 50px;
-    i {
-      float: left;
-      padding: 7px 0 0 20px;
-      font-size: 2.5em;
-
-    }
-    i::after {
-      padding-left: 10px;
-      content: "|";
-    }
-    a {
-      text-decoration: none;
-      color: white;
-    }
-    .fbtext {
-      padding: 12px 0 0 0px;
-      text-align: center;
-      font-size: 1.2em;
-    }
-  }
-
-}
-
-
-
 .hide {
   display: none;
 }
@@ -95,7 +41,61 @@ i.fa-trash-o {
         text-decoration: none;
         color: $text-color;
       }
+
     }
+
+    #login {
+      background-color: $primary-color;
+      height: 100%;
+
+      #instructions {
+        padding-top: 10px;
+       color: $text-color;
+       text-align: center;
+       font-size: 1.25em;
+      }
+
+      #logo {
+        font-size: 3em;
+        padding-top: 10px;
+        text-align: center;
+        color: $secondary-color;
+      }
+
+      #signin {
+        pointer: cursor;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: rgb(59,89,152);
+        width: 90%;
+        border-radius: 10px;
+        height: 50px;
+        i {
+          float: left;
+          padding: 7px 0 0 20px;
+          font-size: 2.5em;
+
+        }
+        i::after {
+          padding-left: 10px;
+          content: "|";
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        .fbtext {
+          padding: 12px 0 0 0px;
+          text-align: center;
+          font-size: 1.2em;
+        }
+      }
+
+    }
+
     nav {
       ul {
         margin: 0 auto;
@@ -290,6 +290,7 @@ i.fa-trash-o {
         }
         .userInfo {
           float: left;
+          max-width: 50%;
           padding-left: 20px;
           line-height: 1.75em;
           .name {
