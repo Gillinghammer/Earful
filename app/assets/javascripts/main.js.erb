@@ -295,6 +295,7 @@
       followed_id: user.id
     }}).success(function(data){
       console.log("successfully created a new relationship");
+      $scope.loadMyFeed();
     });
   }
 
