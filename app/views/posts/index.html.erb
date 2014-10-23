@@ -14,10 +14,6 @@
 </nav>
 <!-- My Personal Feed -->
 <div id="mySounds">
-  <div id="mySoundsStart" class="noData">
-    <h2>No sounds yet, upload one!</h2>
-    <h3>Rotate your phone for instructions</h3>
-  </div>
   <div class="soundItem animated fadeInUp" ng-repeat="item in mySounds | orderBy : created_at " on-last-repeat="buildWave">
 
     <div class="mediaSection">
@@ -54,6 +50,10 @@
       </div>
       <i class="fa fa-trash-o" ng-click="deleteItem(item)"></i>
     </div>
+  </div>
+  <div id="mySoundsStart" class="noData">
+    <h2>No sounds yet, upload one!</h2>
+    <h3>Rotate your phone for instructions</h3>
   </div>
 </div>
 

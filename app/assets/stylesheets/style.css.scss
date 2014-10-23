@@ -1,4 +1,28 @@
 $font-stack: 'Roboto Slab', serif;
+
+// Cool
+// $primary-color: #778787;
+// $secondary-color: #FE6B61;
+// $text-color: #FEF8C6;
+// $special-color: #333;
+// $background-color: #28282A;
+
+// Sunset
+// $primary-color: #BA2D2D;
+// $secondary-color: #C7C730;
+// $text-color: #302727;
+// $special-color: #333;
+// $background-color: #302727;
+
+// MINT
+// $primary-color: #0C5149;
+// $secondary-color: #09C184;
+// $text-color: #0D192B;
+// $special-color: #333;
+// $background-color: #07F9A2;
+
+
+// PINK AND BLUE
 $primary-color: #F2385A;
 $secondary-color: #3AA1BF;
 $text-color: #333;
@@ -12,7 +36,7 @@ $background-color: #E9F1DF;
 html, body {
   height: 100%;
   min-height: 100%;
-
+  background-color: $background-color;
 }
 
 .hide {

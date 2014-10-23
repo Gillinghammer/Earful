@@ -9,9 +9,19 @@ class PostsController < ApplicationController
       #@followed_posts = @user.following.first.posts #TODO fix this to return all posts of followed user
     end
     @all_posts = Post.all
+
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: { my_posts: @my_posts, all_posts: @all_posts }}
+      
+      format.json do
+        
+        [(@my_posts||[]), @all_posts].each do |collection|
+          collection.map! { |post| PostSerializer.new(post).as_json['post'] }
+        end
+
+        render json: { my_posts: @my_posts, all_posts: @all_posts }
+      end
+
     end
   end
 
