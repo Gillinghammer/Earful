@@ -313,8 +313,8 @@ html, body {
             font-weight: bold;
             display: block;
             padding-left: 15px;
-            color: $highlight-color;
-            text-decoration: none;
+            color: $background-color;
+            text-decoration: underline;
           }
         }
         .date {
