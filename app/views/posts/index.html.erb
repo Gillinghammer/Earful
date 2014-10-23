@@ -100,7 +100,7 @@
   <div class="followedItem animated fadeInUp" ng-repeat="item in allPosts | filter:searchContent" on-last-repeat="buildWave">
     <div class="titleBar">
       <div class="user">
-        {{item.user_name}}<a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
+        {{item.user_name}} <br><a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
       </div>
       <div class="date">
         {{ item.created_at | date:'MMM dd, y' }}

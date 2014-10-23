@@ -11,8 +11,6 @@
     };
   })
 
-
-
   app.controller('FeedController', ['$scope','$http', function($scope, $http) {
     $scope.menuItem = "My Sounds"
 
@@ -252,9 +250,9 @@
     $scope.createWave = function(mySounds, element){
       $scope.myWaves = {};
       $.each(mySounds, function(index, value){
-        $scope.myWaves[value.user_id + value.sound.url] = Object.create(WaveSurfer);
+        $scope.myWaves[value.user_id + value.sound.sound.url] = Object.create(WaveSurfer);
         console.log(element);
-        $scope.myWaves[value.user_id + value.sound.url].init({
+        $scope.myWaves[value.user_id + value.sound.sound.url].init({
           container: document.querySelector(element + ' .waveform_'+value.id),
           waveColor: '#3AA1BF',
           progressColor: '#F2385A',
@@ -264,7 +262,7 @@
           scrollParent: true
         });
 
-        $scope.myWaves[value.user_id + value.sound.url].load(value.sound.url);        
+        $scope.myWaves[value.user_id + value.sound.sound.url].load(value.sound.sound.url);        
       });
 
     }
@@ -312,18 +310,18 @@
   $scope.stopSound = function(item){
     $scope.playingSound = false;
     $scope.itemPlaying = item.id;
-    $scope.myWaves[item.user_id + item.sound.url].stop();
+    $scope.myWaves[item.user_id + item.sound.sound.url].stop();
   }
 
   $scope.playSound = function(item){
     $scope.playingSound = true;
     $scope.itemPlaying = item.id;
-    $scope.myWaves[item.user_id + item.sound.url].play();
+    $scope.myWaves[item.user_id + item.sound.sound.url].play();
     $scope.trackProgress(item);
   }
 
   $scope.trackProgress = function(item) {
-    $scope.myWaves[item.user_id + item.sound.url].on('progress', function(status){
+    $scope.myWaves[item.user_id + item.sound.sound.url].on('progress', function(status){
       if (status * 100 >= 99.8) { 
         $scope.stopSound(item);
         $scope.$apply();
