@@ -41,10 +41,9 @@
     }
     ]
 
-    $scope.random = function(element){
+    $scope.menuSelect = function(element){
 
       if ($scope.menuOpen) {
-        console.log("inside if", $scope.menuOpen);
         switch(element.callMethod) {
           case 'loadMySounds()':
           $scope.loadMySounds()
@@ -87,7 +86,7 @@
     ending_point = (document.URL).search('/posts');
     $scope.userId = (document.URL).substring(starting_point,ending_point);
     // variable used to determine if the play or stop button should be shown, set to false on load
-    $scope.playingSound = false;
+    // $scope.playingSound = false;
     // an empty map object
     $scope.map = {};
     // an empty array for the location markers
@@ -105,6 +104,7 @@
         buildNav()
         break;
         case "buildWave":
+        
         buildWave(element)
         break;
       }
@@ -130,8 +130,12 @@
 
       // Get request to retreive mySounds
       $http.get('/users/'+ $scope.userId +'/posts.json').success(function(data){
-        $scope.mySounds = data.posts
+        $scope.mySounds = data.my_posts
         console.log($scope.mySounds);
+
+        if ($scope.mySounds.length > 0) {
+          $('#mySoundsStart').addClass('hide');
+        }
         
       });
       // unhide mySounds
@@ -178,6 +182,11 @@
       //Get request to retreive publicPosts
       $http.get('/users/'+ $scope.userId +'/followed.json').success(function(data){
         $scope.followedPosts = data.feeds;
+
+        if ($scope.followedPosts.length > 0) {
+          $('#feedStart').addClass('hide');
+        }
+
       });
 
       //$scope.createWave($scope.followedPosts);
@@ -204,7 +213,12 @@
       
       $scope.allPosts = [];
       $http.get('/posts.json').success(function(data){
-        $scope.allPosts = data.posts;
+        $scope.allPosts = data.all_posts;
+
+        if ($scope.allPosts.length > 0) {
+          $('#globalStart').addClass('hide');
+        }
+
       });
     }
 
@@ -236,11 +250,11 @@
     }
 
     $scope.createWave = function(mySounds, element){
-
+      $scope.myWaves = {};
       $.each(mySounds, function(index, value){
-        $scope.myWaves[value.user_id + value.sound.sound.url] = Object.create(WaveSurfer);
+        $scope.myWaves[value.user_id + value.sound.url] = Object.create(WaveSurfer);
         console.log(element);
-        $scope.myWaves[value.user_id + value.sound.sound.url].init({
+        $scope.myWaves[value.user_id + value.sound.url].init({
           container: document.querySelector(element + ' .waveform_'+value.id),
           waveColor: '#3AA1BF',
           progressColor: '#F2385A',
@@ -250,7 +264,7 @@
           scrollParent: true
         });
 
-        $scope.myWaves[value.user_id + value.sound.sound.url].load(value.sound.sound.url);        
+        $scope.myWaves[value.user_id + value.sound.url].load(value.sound.url);        
       });
 
     }
@@ -296,23 +310,30 @@
   }
 
   $scope.stopSound = function(item){
-
-    $scope.myWaves[item.user_id + item.sound.sound.url].stop();
     $scope.playingSound = false;
-
+    $scope.itemPlaying = item.id;
+    $scope.myWaves[item.user_id + item.sound.url].stop();
   }
 
-  $scope.playSound = function(item){ 
-    console.log('play function')
+  $scope.playSound = function(item){
     $scope.playingSound = true;
-    $scope.myWaves[item.user_id + item.sound.sound.url].play();
+    $scope.itemPlaying = item.id;
+    $scope.myWaves[item.user_id + item.sound.url].play();
+    $scope.trackProgress(item);
+  }
 
-    $scope.myWaves[item.user_id + item.sound.sound.url].on('finish', function(){
-      console.log("Sound finished");
-      $scope.playingSound = false;
+  $scope.trackProgress = function(item) {
+    $scope.myWaves[item.user_id + item.sound.url].on('progress', function(status){
+      if (status * 100 >= 99.8) { 
+        $scope.stopSound(item);
+        $scope.$apply();
+      }
     });
   }
 
+  $scope.isPlayingItem = function(item){
+    return ($scope.playingSound && $scope.itemPlaying == item.id)
+  }
 
     // $scope.loadMap = function(){ 
     //   $('#myfeed').addClass('hide');

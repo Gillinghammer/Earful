@@ -7,14 +7,11 @@ class PostsController < ApplicationController
     if @user
       @my_posts = @user.posts
       #@followed_posts = @user.following.first.posts #TODO fix this to return all posts of followed user
-    else
-      @my_posts = Post.where(public: true) # TODO where user_id != current_user.id
     end
-    # respond_with()
-
+    @all_posts = Post.all
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @my_posts }
+      format.json { render json: { my_posts: @my_posts, all_posts: @all_posts }}
     end
   end
 

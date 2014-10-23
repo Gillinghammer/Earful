@@ -1,0 +1,143 @@
+<%= render '/devise/shared/splash' %>
+<!-- top nav -->
+<div id="signout"><a href="/sign_out"><i class="fa fa-sign-out"></i></a></div>
+<nav>
+  <i class="fa fa-caret-down" ng-show="menuOpen"></i>
+  <i class="fa fa-caret-right" ng-hide="menuOpen"></i>
+
+  <ul>
+    <li ng-repeat="element in menuItems | filter:menuItem" id="{{ element.id }}" ng-click="menuSelect(element)" >
+      {{ element.text }}
+    </li>
+  </ul>
+
+</nav>
+<!-- My Personal Feed -->
+<div id="mySounds">
+  <div id="mySoundsStart" class="noData">
+    <h2>No sounds yet, upload one!</h2>
+    <h3>Rotate your phone for instructions</h3>
+  </div>
+  <div class="soundItem animated fadeInUp" ng-repeat="item in mySounds track by $index | orderBy : created_at " on-last-repeat="buildWave">
+
+    <div class="mediaSection">
+      <div class="playButton" >
+        <i ng-hide="playingSound && itemPlaying == item.id" ng-click="playSound(item)" class="fa fa-play-circle-o"></i>
+        <i ng-show="playingSound && itemPlaying == item.id" ng-click="stopSound(item)" class="fa fa-stop"></i>
+      </div>
+      <div class="wave waveform_{{item.id}}">
+      </div>
+    </div>
+    <div class="post">
+      <div class="dateBox" >
+        <div class="day">
+          {{ item.created_at | date:'dd' }}
+        </div>
+        <div class="monthyear">
+          {{ item.created_at | date:'MMM, y' }}
+        </div>
+        <div class="location" ng-click="selectEditItem(item)">
+          <div class="itemLocation" ng-hide="editItem === item">
+            <i class="fa fa-map-marker"></i>{{item.location}}
+          </div>
+          <input  type="text" ng-model="item.location" placeholder="Location" ng-show="editItem === item"><br>
+          <button ng-show="editItem === item" ng-click="selectUpdateItem(item)">Save</button>
+        </div>
+      </div>
+      <div class="postText" >
+        <div class="postTitle">
+          {{item.title}}
+        </div>
+        <div class="postContent">
+          {{item.content}}
+        </div>
+      </div>
+      <i class="fa fa-trash-o" ng-click="deleteItem(item)"></i>
+    </div>
+  </div>
+</div>
+
+<!-- My Following Feed -->
+<div id="myFeed">
+  <div id="feedStart" class="noData">
+    <h2>No sounds have been uploaded yet.</h2>
+    <h3>Rotate your phone for instructions</h3>
+  </div>
+  <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts" on-last-repeat="buildWave">
+    <div class="titleBar">
+      <div class="user">
+        {{item.user_name}} <br><a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
+      </div>
+      <div class="date">
+        {{ item.created_at | date:'MMM dd, y' }}
+      </div>
+    </div>
+    <div class="mediaSection">
+      <div class="playButton" >
+        <i ng-hide="playingSound" ng-click="playSound(item)" class="fa fa-play-circle-o"></i>
+        <i ng-show="playingSound" ng-click="stopSound(item)" class="fa fa-stop"></i>
+      </div>
+      <div class="wave waveform_{{item.id}}">
+      </div>
+    </div>
+    <div class="feedText">
+      <div class="title">{{item.title}}</div>
+      <div class="content">{{item.content}}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Global Feed -->
+<div id="globalFeed">
+
+  <div class="searchPosts">
+    <input type="text" name="search" placeholder="Search for Sounds" class="search" ng-model="searchContent">
+  </div>
+  <div id="globalStart" class="noData">
+    <h2>No sounds have been uploaded yet.</h2>
+    <h3>Rotate your phone for instructions</h3>
+  </div>
+  <div class="followedItem animated fadeInUp" ng-repeat="item in allPosts | filter:searchContent" on-last-repeat="buildWave">
+    <div class="titleBar">
+      <div class="user">
+        {{item.user_name}}<a href="#" ng-click="unfollowUser(item)" ng-hide="userId == item.user_id">unfollow</a>
+      </div>
+      <div class="date">
+        {{ item.created_at | date:'MMM dd, y' }}
+      </div>
+    </div>
+    <div class="mediaSection">
+      <div class="playButton" >
+        <i ng-hide="playingSound" ng-click="playSound(item)" class="fa fa-play-circle-o"></i>
+        <i ng-show="playingSound" ng-click="stopSound(item)" class="fa fa-stop"></i>
+      </div>
+      <div class="wave waveform_{{item.id}}">
+      </div>
+    </div>
+    <div class="feedText">
+      <div class="title">{{item.title}}</div>
+      <div class="content">{{item.content}}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Find Users -->
+<div id="findUsers">
+  <input type="text" name="search" placeholder="Search for Users" class="search" ng-model="searchUsers">
+  <div class="users animated fadeInUp" ng-repeat="user in users | filter:searchUsers">
+
+    <div class="userRecord">
+      <img src="{{user.image}}?type=large" class="avatar"/>
+      <div class="userInfo">
+        <div class="name">{{ user.user_name }}</div>
+        <a href="#" ng-click="followUser(user)" ng-hide="userId == user.id">follow</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Map View -->
+<div id="map">
+</div>
+
+<!-- Settings -->

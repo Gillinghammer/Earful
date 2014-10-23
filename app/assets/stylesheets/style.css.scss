@@ -36,7 +36,12 @@ html, body {
         text-decoration: none;
         color: $text-color;
       }
+    }
 
+    .noData {
+      h2, h3 {
+        text-align: center;
+      }
     }
 
     #login {
@@ -106,12 +111,6 @@ html, body {
           &.selected {
             background-color: $secondary-color;
           }
-          // &:hover {
-          //   background-color: darken( $primary-color, 10% );
-          // }
-          // &:active {
-          //   background-color: lighten( $primary-color, 10% );
-          // }
         }
       }
       i.fa-caret-down, i.fa-caret-right {
@@ -151,7 +150,7 @@ html, body {
         }
       }
       .wave {
-
+        // position: relative;
         width: 100%;
       }
     }
