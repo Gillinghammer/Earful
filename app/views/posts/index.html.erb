@@ -59,10 +59,7 @@
 
 <!-- My Following Feed -->
 <div id="myFeed">
-  <div id="feedStart" class="noData">
-    <h2>No sounds have been uploaded yet.</h2>
-    <h3>Rotate your phone for instructions</h3>
-  </div>
+  
   <div class="followedItem animated fadeInUp" ng-repeat="item in followedPosts" on-last-repeat="buildWave">
     <div class="titleBar">
       <div class="user">
@@ -85,6 +82,10 @@
       <div class="content">{{item.content}}</div>
     </div>
   </div>
+  <div id="feedStart" class="noData">
+    <h2>No sounds have been uploaded yet.</h2>
+    <h3>Rotate your phone for instructions</h3>
+  </div>
 </div>
 
 <!-- Global Feed -->
@@ -93,10 +94,7 @@
   <div class="searchPosts">
     <input type="text" name="search" placeholder="Search for Sounds" class="search" ng-model="searchContent">
   </div>
-  <div id="globalStart" class="noData">
-    <h2>No sounds have been uploaded yet.</h2>
-    <h3>Rotate your phone for instructions</h3>
-  </div>
+  
   <div class="followedItem animated fadeInUp" ng-repeat="item in allPosts | filter:searchContent" on-last-repeat="buildWave">
     <div class="titleBar">
       <div class="user">
@@ -118,6 +116,10 @@
       <div class="title">{{item.title}}</div>
       <div class="content">{{item.content}}</div>
     </div>
+  </div>
+  <div id="globalStart" class="noData">
+    <h2>No sounds have been uploaded yet.</h2>
+    <h3>Rotate your phone for instructions</h3>
   </div>
 </div>
 
