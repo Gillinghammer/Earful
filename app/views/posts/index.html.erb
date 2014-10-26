@@ -126,7 +126,7 @@
 <!-- Find Users -->
 <div id="findUsers">
   <input type="text" name="search" placeholder="Search for Users" class="search" ng-model="searchUsers">
-  <div class="users animated fadeInUp" ng-repeat="user in users | filter:searchUsers">
+  <div class="users animated fadeInUp" ng-repeat="user in users | filter:searchUsers | orderBy: 'user_name' ">
 
     <div class="userRecord">
       <img src="{{user.image}}?type=large" class="avatar"/>
