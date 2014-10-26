@@ -283,8 +283,8 @@
     $scope.selectUpdateItem = function(item){
       $http.put('/users/'+ $scope.userId + '/posts/' + item.id + '.json', item ).success(function(data){
         $scope.editItem = 0;
-        var index = $scope.mySounds.indexOf(item);
-        $scope.mySounds.splice(index, 1, data.post);
+        // var index = $scope.mySounds.indexOf(item);
+        // $scope.mySounds.splice(index, 1, data.post);
       });
     }
 
